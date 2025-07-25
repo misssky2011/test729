@@ -1,0 +1,45 @@
+[2025-07-12 15:28:19] 开始执行提交流程, 读取文件: saveTokens.csv
+[2025-07-12 15:28:19] 成功读取 10 个 token
+[2025-07-12 15:28:19] 
+==================================================
+[2025-07-12 15:28:19] 开始处理 token [1/5]: Bearer eyJhbGci...
+[2025-07-12 15:28:19] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"rctn7fkgmzsa33hi9jx2u5vo2pl9zpj4","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-12 15:28:19] 生成动态签名: random=rctn7fkgmzsa33hi9jx2u5vo2pl9zpj4, timestamp=1752319699, signature=268E7AD00E35C0A1DEDD54FDC8D903B1
+[2025-07-12 15:28:20] 创建订单响应状态码: 200
+[2025-07-12 15:28:20] ✅ 订单创建成功
+[2025-07-12 15:28:22] 尝试获取充值记录 [1/5]
+[2025-07-12 15:28:22] 签名前参数: {"language":0,"pageNo":1,"pageSize":10,"payId":-1,"payTypeId":-1,"random":"gkdjoh77cvc1f808i6wtxmcwjjukdyr6","state":-1}
+[2025-07-12 15:28:22] 获取记录响应状态码: 200
+[2025-07-12 15:28:22] ✅ 获取到充值记录: 单号=RC2025071216581996300011a, 金额=888
+[2025-07-12 15:28:22] 签名前参数: {"language":5,"random":"qxpj3g31901k7ufhksge5as7ukppgzrc","webSite":"https%3A%2F%2Fsitweb.22889.club"}
+[2025-07-12 15:28:23] 工单入口响应状态码: 200
+[2025-07-12 15:28:23] ✅ 提取到 datablock: 024a224b4c564299ce33881e8b1464b93a0f4e12b4c9d0106b6929946570aca54b0131ef7192efda3c8dc95ea8729eb9ee962251b4be217169f7c18d1b1b7aaf6442d3927deb80f997e244a2a1556b75aa388ec3414257820a25d1d3a0937b8a907e0b97d9898743ece7dbf47744bb48
+[2025-07-12 15:28:23] 生成的 UTR: 679442662066
+[2025-07-12 15:28:23] 签名前参数: {"code":10161,"dataBlock":"024a224b4c564299ce33881e8b1464b93a0f4e12b4c9d0106b6929946570aca54b0131ef7192efda3c8dc95ea8729eb9ee962251b4be217169f7c18d1b1b7aaf6442d3927deb80f997e244a2a1556b75aa388ec3414257820a25d1d3a0937b8a907e0b97d9898743ece7dbf47744bb48","formId":86,"language":0,"payName":"S7DaysPayINR-UPI","payTypeId":10161,"random":"525175666475","tenantId":1062,"workOrderTypeId":6}
+[2025-07-12 15:28:23] 提交工单参数: random=525175666475, timestamp=1752319703, signature=D93DF118B076B6D03263006C98027012
+[2025-07-12 15:28:23] 提交工单响应状态码: 200
+[2025-07-12 15:28:23] 工单提交响应内容: {
+  "data": true,
+  "msgParameters": null,
+  "code": 0,
+  "msg": "Succeed",
+  "msgCode": 0
+}
+[2025-07-12 15:28:23] ✅ 工单提交成功！
+[2025-07-12 15:28:23] 
+==================================================
+[2025-07-12 15:28:23] 开始处理 token [2/5]: Bearer eyJhbGci...
+[2025-07-12 15:28:23] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"d3gxpkamphtmrmxbaqm1mgrycjz659ek","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-12 15:28:23] 生成动态签名: random=d3gxpkamphtmrmxbaqm1mgrycjz659ek, timestamp=1752319703, signature=D66C3E34E25D6A15247A1350807CF0C8
+[2025-07-12 15:28:24] 创建订单响应状态码: 200
+[2025-07-12 15:28:24] ✅ 订单创建成功
+[2025-07-12 15:28:26] 尝试获取充值记录 [1/5]
+[2025-07-12 15:28:26] 签名前参数: {"language":0,"pageNo":1,"pageSize":10,"payId":-1,"payTypeId":-1,"random":"j8fj7ilkcga797sm9ge3antv2p0gv8ej","state":-1}
+[2025-07-12 15:28:26] 获取记录响应状态码: 200
+[2025-07-12 15:28:26] ✅ 获取到充值记录: 单号=RC2025071216582407000012a, 金额=888
+[2025-07-12 15:28:26] 签名前参数: {"language":5,"random":"glkths0q4let6nczxqtr425q8de7mfa4","webSite":"https%3A%2F%2Fsitweb.22889.club"}
+[2025-07-12 15:28:27] 工单入口响应状态码: 200
+[2025-07-12 15:28:27] ✅ 提取到 datablock: 5b21caa6d94da77b93ef37d1be6bb0438bc753ee1bda3be363d6bc8856090b29d1d3a19a4f53dd5a1bab956b5803915b3f87311259741ccbdbb53729d0798e44658f9b3257402358bda06cd64b5e7d2450ffa28bdaa4ff0b45af6162789b536aad8f906507bd741f67c29347c06029e3
+[2025-07-12 15:28:27] 生成的 UTR: 103355475970
+[2025-07-12 15:28:27] 签名前参数: {"code":10161,"dataBlock":"5b21caa6d94da77b93ef37d1be6bb0438bc753ee1bda3be363d6bc8856090b29d1d3a19a4f53dd5a1bab956b5803915b3f87311259741ccbdbb53729d0798e44658f9b3257402358bda06cd64b5e7d2450ffa28bdaa4ff0b45af6162789b536aad8f906507bd741f67c29347c06029e3","formId":86,"language":0,"payName":"S7DaysPayINR-UPI","payTypeId":10161,"random":"197280161845","tenantId":1062,"workOrderTypeId":6}
+[2025-07-12 15:28:27] 提交工单参数: random=197280161845, timestamp=1752319707, signature=FBBDD60EEBFC59D34046F3A24D941831

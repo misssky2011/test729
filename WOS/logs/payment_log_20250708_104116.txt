@@ -1,0 +1,56 @@
+[2025-07-08 10:41:16] 开始执行提交流程, 读取文件: saveTokens.csv
+[2025-07-08 10:41:16] 成功读取 10 个 token
+[2025-07-08 10:41:16] 
+==================================================
+[2025-07-08 10:41:16] 开始处理 token [1/2]: Bearer eyJhbGci...
+[2025-07-08 10:41:16] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"olz2jndzeeorv8gihppdoz14jr3e7be0","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-08 10:41:16] 生成动态签名: random=olz2jndzeeorv8gihppdoz14jr3e7be0, timestamp=1751956876, signature=2CC84EE9B8DE59AEAB9D50C88EA49DB6
+[2025-07-08 10:41:17] 创建订单响应状态码: 200
+[2025-07-08 10:41:17] ✅ 订单创建成功
+[2025-07-08 10:41:19] 尝试获取充值记录 [1/5]
+[2025-07-08 10:41:19] 签名前参数: {"language":0,"pageNo":1,"pageSize":10,"payId":-1,"payTypeId":-1,"random":"d5u2w394fmemrv237947eeekwe98xd70","state":-1}
+[2025-07-08 10:41:20] 获取记录响应状态码: 200
+[2025-07-08 10:41:20] ✅ 获取到充值记录: 单号=RC2025070812111696400002a, 金额=888
+[2025-07-08 10:41:20] 签名前参数: {"language":5,"random":"o82x1pqa2xd31p3wndfj5wp2wpo2ps41","webSite":"https%3A%2F%2Fsitweb.22889.club"}
+[2025-07-08 10:41:20] 工单入口响应状态码: 200
+[2025-07-08 10:41:20] ✅ 提取到 datablock: 27b3458e46da5ca495702c8d83adf25b12cb8f38049d9c53ac08bcdbb3b5b5ba96722889f9a2c9b9d70c379229d57ee25b5195da9dc596b128856fa00d77f8e6f3c744ae561524f962b1d5ae0a28116975c88d31799020be1ac57133d4a2a1340d9b2c7633e03ca2f235ace6ef78c0ca
+[2025-07-08 10:41:20] 生成的 UTR: 619228949462
+[2025-07-08 10:41:20] 签名前参数: {"code":10161,"dataBlock":"27b3458e46da5ca495702c8d83adf25b12cb8f38049d9c53ac08bcdbb3b5b5ba96722889f9a2c9b9d70c379229d57ee25b5195da9dc596b128856fa00d77f8e6f3c744ae561524f962b1d5ae0a28116975c88d31799020be1ac57133d4a2a1340d9b2c7633e03ca2f235ace6ef78c0ca","formId":86,"language":0,"payName":"S7DaysPayINR-UPI","payTypeId":10161,"random":"210539842542","tenantId":1062,"workOrderTypeId":6}
+[2025-07-08 10:41:20] 提交工单参数: random=210539842542, timestamp=1751956880, signature=1FADAA867F5C58A78DC5BAA541DE6845
+[2025-07-08 10:41:20] 提交工单响应状态码: 200
+[2025-07-08 10:41:20] 工单提交响应内容: {
+  "data": true,
+  "msgParameters": null,
+  "code": 0,
+  "msg": "Succeed",
+  "msgCode": 0
+}
+[2025-07-08 10:41:20] ✅ 工单提交成功！
+[2025-07-08 10:41:20] 
+==================================================
+[2025-07-08 10:41:20] 开始处理 token [2/2]: Bearer eyJhbGci...
+[2025-07-08 10:41:20] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"67ozs7jbrk5josbxnznmrlzbm632n4zc","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-08 10:41:20] 生成动态签名: random=67ozs7jbrk5josbxnznmrlzbm632n4zc, timestamp=1751956880, signature=404ADEC0E52796C017EF11A6C5F17A5F
+[2025-07-08 10:41:22] 创建订单响应状态码: 200
+[2025-07-08 10:41:22] ✅ 订单创建成功
+[2025-07-08 10:41:24] 尝试获取充值记录 [1/5]
+[2025-07-08 10:41:24] 签名前参数: {"language":0,"pageNo":1,"pageSize":10,"payId":-1,"payTypeId":-1,"random":"webkczj0ad6xng6dt8ckxuglypaxnk3b","state":-1}
+[2025-07-08 10:41:24] 获取记录响应状态码: 200
+[2025-07-08 10:41:24] ✅ 获取到充值记录: 单号=RC2025070812112124900003a, 金额=888
+[2025-07-08 10:41:24] 签名前参数: {"language":5,"random":"4va5mo33gu6f5fblcr9lo8jjbanxd1yk","webSite":"https%3A%2F%2Fsitweb.22889.club"}
+[2025-07-08 10:41:25] 工单入口响应状态码: 200
+[2025-07-08 10:41:25] ✅ 提取到 datablock: 19c69b5cbb01616566baf96c4a50a5694fffdc38592b5aaf3c2790f45189d9091b58a9a7ed071f154b69b039c89b2920ed13081ef2405cd5c4a8c93bbeef642ce970d97c4beac9f96fe8d61545dd42668345a170965a1b347fdda49006fdd7d13e9f661612770fe10e167e77f8926d3d
+[2025-07-08 10:41:25] 生成的 UTR: 756369973991
+[2025-07-08 10:41:25] 签名前参数: {"code":10161,"dataBlock":"19c69b5cbb01616566baf96c4a50a5694fffdc38592b5aaf3c2790f45189d9091b58a9a7ed071f154b69b039c89b2920ed13081ef2405cd5c4a8c93bbeef642ce970d97c4beac9f96fe8d61545dd42668345a170965a1b347fdda49006fdd7d13e9f661612770fe10e167e77f8926d3d","formId":86,"language":0,"payName":"S7DaysPayINR-UPI","payTypeId":10161,"random":"581027098107","tenantId":1062,"workOrderTypeId":6}
+[2025-07-08 10:41:25] 提交工单参数: random=581027098107, timestamp=1751956885, signature=215C3F58BCA394547EBA7E059B0E8664
+[2025-07-08 10:41:25] 提交工单响应状态码: 200
+[2025-07-08 10:41:25] 工单提交响应内容: {
+  "data": true,
+  "msgParameters": null,
+  "code": 0,
+  "msg": "Succeed",
+  "msgCode": 0
+}
+[2025-07-08 10:41:25] ✅ 工单提交成功！
+[2025-07-08 10:41:25] 处理完成: 共尝试 2 个, 成功 2 个
+[2025-07-08 10:41:25] 程序执行完成, 成功提交 2 个工单

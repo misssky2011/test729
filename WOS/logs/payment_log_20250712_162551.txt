@@ -1,0 +1,43 @@
+[2025-07-12 16:25:51] 开始执行提交流程, 读取文件: saveTokens.csv
+[2025-07-12 16:25:51] 成功读取 10 个 token
+[2025-07-12 16:25:51] 
+==================================================
+[2025-07-12 16:25:51] 开始处理 token [1/5]: Bearer eyJhbGci...
+[2025-07-12 16:25:51] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"tou86whf5zsqwiic6njbtv9vpzu1ghe7","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-12 16:25:51] 生成动态签名: random=tou86whf5zsqwiic6njbtv9vpzu1ghe7, timestamp=1752323151, signature=8A030A1A4827900EC273F95973EAE1E0
+[2025-07-12 16:25:51] 创建订单响应状态码: 401
+[2025-07-12 16:25:51] ❌ 订单创建请求失败: HTTP 401
+[2025-07-12 16:25:51] ❌ 订单创建失败，跳过后续步骤
+[2025-07-12 16:25:51] 
+==================================================
+[2025-07-12 16:25:51] 开始处理 token [2/5]: Bearer eyJhbGci...
+[2025-07-12 16:25:51] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"bhb3q3jma63cf1ng4o7nmok68a0y530u","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-12 16:25:51] 生成动态签名: random=bhb3q3jma63cf1ng4o7nmok68a0y530u, timestamp=1752323151, signature=5E357B0E2E89BBF96BA8995D677D9A72
+[2025-07-12 16:25:52] 创建订单响应状态码: 401
+[2025-07-12 16:25:52] ❌ 订单创建请求失败: HTTP 401
+[2025-07-12 16:25:52] ❌ 订单创建失败，跳过后续步骤
+[2025-07-12 16:25:52] 
+==================================================
+[2025-07-12 16:25:52] 开始处理 token [3/5]: Bearer eyJhbGci...
+[2025-07-12 16:25:52] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"8rjjfdon8ebu9zb8jq2m68vx7in8cob7","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-12 16:25:52] 生成动态签名: random=8rjjfdon8ebu9zb8jq2m68vx7in8cob7, timestamp=1752323152, signature=4C246E4DA5D214FA301811B5FD6A0129
+[2025-07-12 16:25:52] 创建订单响应状态码: 401
+[2025-07-12 16:25:52] ❌ 订单创建请求失败: HTTP 401
+[2025-07-12 16:25:52] ❌ 订单创建失败，跳过后续步骤
+[2025-07-12 16:25:52] 
+==================================================
+[2025-07-12 16:25:52] 开始处理 token [4/5]: Bearer eyJhbGci...
+[2025-07-12 16:25:52] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"vjr9sk2mlzvjc9mxds0jpdq85d5bgke6","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-12 16:25:52] 生成动态签名: random=vjr9sk2mlzvjc9mxds0jpdq85d5bgke6, timestamp=1752323152, signature=9A22337554FCF166989EE3D3C9812636
+[2025-07-12 16:25:53] 创建订单响应状态码: 401
+[2025-07-12 16:25:53] ❌ 订单创建请求失败: HTTP 401
+[2025-07-12 16:25:53] ❌ 订单创建失败，跳过后续步骤
+[2025-07-12 16:25:53] 
+==================================================
+[2025-07-12 16:25:53] 开始处理 token [5/5]: Bearer eyJhbGci...
+[2025-07-12 16:25:53] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"ztuq31jdc1euwidhbe5b1n61uooic3j2","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-12 16:25:53] 生成动态签名: random=ztuq31jdc1euwidhbe5b1n61uooic3j2, timestamp=1752323153, signature=B734789AAD5E7F5D4827D03ABB475ED7
+[2025-07-12 16:25:53] 创建订单响应状态码: 401
+[2025-07-12 16:25:53] ❌ 订单创建请求失败: HTTP 401
+[2025-07-12 16:25:53] ❌ 订单创建失败，跳过后续步骤
+[2025-07-12 16:25:53] 提交工单统计 - 成功: 0, 失败: 5, 总计: 5

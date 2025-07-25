@@ -152,7 +152,7 @@ def get_balance(token: str):
         return None, f"获取余额异常: {e}"
 
 
-def get_issue_number(game_code: str) -> (Optional[str], str):
+def get_issue_number(game_code: str) -> tuple[Optional[str], str]:
     try:
         ts = int(time.time() * 1000)
         url = f"{DRAW_BASE}/{game_code}.json?ts={ts}"
@@ -163,7 +163,7 @@ def get_issue_number(game_code: str) -> (Optional[str], str):
         return None, f"获取期号异常: {e}"
 
 
-def get_history_issue_page(game_code: str) -> (Optional[dict], str):
+def get_history_issue_page(game_code: str) -> tuple[Optional[dict], str]:
     try:
         ts = int(time.time() * 1000)
         url = f"{DRAW_BASE}/{game_code}/GetHistoryIssuePage.json?ts={ts}"
@@ -174,7 +174,7 @@ def get_history_issue_page(game_code: str) -> (Optional[dict], str):
 
 
 def place_bet(bearer_token: str, game_code: str, issue_number: str, amount: int, bet_multiple: int, bet_content: str,
-              language: str = "en") -> (Optional[dict], str):
+              language: str = "en") -> tuple[Optional[dict], str]:
     random_num = generate_random_number_str()
 
     # 构造签名体
@@ -199,7 +199,9 @@ def place_bet(bearer_token: str, game_code: str, issue_number: str, amount: int,
 
 
 # === 新增：下注记录接口 ===
-def get_bet_record_page(token: str, game_code: str, page_no: int = 1, page_size: int = 20, language: str = "en") -> (Optional[dict], str):
+from typing import Tuple
+
+def get_bet_record_page(token: str, game_code: str, page_no: int = 1, page_size: int = 20, language: str = "en") -> Tuple[Optional[dict], str]:
     """
     获取下注记录分页数据
     """

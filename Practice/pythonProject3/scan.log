@@ -1,0 +1,27 @@
+2024-11-28 20:24:43,842 - INFO - Scanning ports for example.com
+2024-11-28 20:24:43,844 - INFO - Running Nmap scan for example.com
+2024-11-28 20:24:43,844 - INFO - Scanning ports for 127.0.0.1
+2024-11-28 20:24:43,844 - INFO - Running Nmap scan for 127.0.0.1
+2024-11-28 20:24:43,846 - INFO - Testing SQL injection for http://example.com/search
+2024-11-28 20:24:44,925 - INFO - Testing XSS for http://example.com/search
+2024-11-28 20:24:48,577 - INFO - Open ports for example.com: [80]
+2024-11-28 20:24:51,860 - INFO - Open ports for 127.0.0.1: []
+2024-11-28 20:24:56,751 - INFO - Nmap results for 127.0.0.1:
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-11-28 20:24 中国标准时间
+Nmap scan report for www.xmind.net (127.0.0.1)
+Host is up (0.00059s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+9000/tcp open  http          Apache Tomcat (language: en)
+9001/tcp open  http          Elasticsearch REST API 8.13.4 (name: sonarqube; cluster: sonarqube; Lucene 9.10.0)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.86 seconds
+
+2024-11-28 20:25:32,631 - INFO - Nmap results for example.com:
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-11-28 20:24 中国标准时间
+

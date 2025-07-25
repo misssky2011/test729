@@ -1,0 +1,5 @@
+[INFO] [[INFO] [Port] 发现Port，负载: Port 80 open (2024-12-19 14:31:42)] (2024-12-19 14:31:42,976)
+[INFO] [[INFO] [Port] 发现Port，负载: Port 443 open (2024-12-19 14:31:42)] (2024-12-19 14:31:42,980)
+[INFO] [[INFO] [SQL Injection] 发现SQL Injection，负载: ' OR 1=1-- (2024-12-19 14:31:43)] (2024-12-19 14:31:43,034)
+[INFO] [[INFO] [SQL Injection] 发现SQL Injection，负载: ' UNION SELECT null-- (2024-12-19 14:31:43)] (2024-12-19 14:31:43,134)
+[INFO] [[INFO] [SQL Injection] 发现SQL Injection，负载: '; DROP TABLE users-- (2024-12-19 14:31:43)] (2024-12-19 14:31:43,236)

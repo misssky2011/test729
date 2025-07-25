@@ -1,0 +1,54 @@
+📂 [2025-07-12 15:18:42] 开始读取 token 文件: saveTokens.csv
+✅ [2025-07-12 15:18:42] 成功读取 37 个 token
+🚀 [2025-07-12 15:18:42] 
+🚀 开始处理 [1/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:42] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"lrmbkj5ozzuvxkfrtah5htptgzj2i3bx","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:42] 创建订单签名: random=lrmbkj5ozzuvxkfrtah5htptgzj2i3bx, timestamp=1752319122, signature=AA550E21F2BC2DEF74A0109C57FC01E4
+📨 [2025-07-12 15:18:43] 创建订单响应: HTTP 401
+🚀 [2025-07-12 15:18:43] 
+🚀 开始处理 [2/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:43] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"irgbxrul3kb1ewaiykv3rj8j6xp0uzrd","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:43] 创建订单签名: random=irgbxrul3kb1ewaiykv3rj8j6xp0uzrd, timestamp=1752319123, signature=23CAF2DD429DE04C90C0A0A43D3AD21B
+📨 [2025-07-12 15:18:43] 创建订单响应: HTTP 401
+🚀 [2025-07-12 15:18:43] 
+🚀 开始处理 [3/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:43] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"ioml5ca46xhlz9pa5s4ybaa6910yiiet","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:43] 创建订单签名: random=ioml5ca46xhlz9pa5s4ybaa6910yiiet, timestamp=1752319123, signature=4DF78015E1B7BC10D3528468A1504E0A
+📨 [2025-07-12 15:18:44] 创建订单响应: HTTP 401
+🚀 [2025-07-12 15:18:44] 
+🚀 开始处理 [4/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:44] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"pl0poab2swgg995qgbpgkqq48xwgipsw","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:44] 创建订单签名: random=pl0poab2swgg995qgbpgkqq48xwgipsw, timestamp=1752319124, signature=56782B3A131AF234C3474A639C599D35
+📨 [2025-07-12 15:18:44] 创建订单响应: HTTP 401
+🚀 [2025-07-12 15:18:44] 
+🚀 开始处理 [5/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:44] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"m6k8i73nwmi85f6ullc13w8yfr6apyt2","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:44] 创建订单签名: random=m6k8i73nwmi85f6ullc13w8yfr6apyt2, timestamp=1752319124, signature=3D1138C3B7145836BD734077B6FD997B
+📨 [2025-07-12 15:18:44] 创建订单响应: HTTP 401
+🚀 [2025-07-12 15:18:44] 
+🚀 开始处理 [6/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:44] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"hlg8bd62n2yeomrpecs9x5n6q1bnjn1w","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:44] 创建订单签名: random=hlg8bd62n2yeomrpecs9x5n6q1bnjn1w, timestamp=1752319124, signature=274CA26CB1195995393BAFEEEF667DED
+📨 [2025-07-12 15:18:45] 创建订单响应: HTTP 401
+🚀 [2025-07-12 15:18:45] 
+🚀 开始处理 [7/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:45] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"3miiwm1igw0ckvhtl811ity30tp4czhc","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:45] 创建订单签名: random=3miiwm1igw0ckvhtl811ity30tp4czhc, timestamp=1752319125, signature=9DF17706AE25AE20509403C83038D39D
+📨 [2025-07-12 15:18:45] 创建订单响应: HTTP 401
+🚀 [2025-07-12 15:18:45] 
+🚀 开始处理 [8/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:45] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"xm4zhri8uixnl7whxkxlugbw4fzl7dll","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:45] 创建订单签名: random=xm4zhri8uixnl7whxkxlugbw4fzl7dll, timestamp=1752319125, signature=8A98E76A201AFE08EEF1207300F780D5
+📨 [2025-07-12 15:18:45] 创建订单响应: HTTP 401
+🚀 [2025-07-12 15:18:45] 
+🚀 开始处理 [9/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:45] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"og16oyevpx8vxqu6qf8sj9qcm9k122os","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:45] 创建订单签名: random=og16oyevpx8vxqu6qf8sj9qcm9k122os, timestamp=1752319125, signature=474CD4AF35E78490F3FEFAD17D05C12E
+📨 [2025-07-12 15:18:46] 创建订单响应: HTTP 401
+🚀 [2025-07-12 15:18:46] 
+🚀 开始处理 [10/10] Token: Bearer eyJhbGciOiJIU...
+🔐 [2025-07-12 15:18:46] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"nkfr3r40fs25c9acxfyi115juo7h6h7m","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+🔐 [2025-07-12 15:18:46] 创建订单签名: random=nkfr3r40fs25c9acxfyi115juo7h6h7m, timestamp=1752319126, signature=A0341AB835FD09D0B9ABAA9BE39FC256
+📨 [2025-07-12 15:18:46] 创建订单响应: HTTP 401
+📊 [2025-07-12 15:18:46] 
+📊 执行完成：总数 10, 成功 0, 失败 10

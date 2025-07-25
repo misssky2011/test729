@@ -1,0 +1,30 @@
+[2025-07-12 15:28:35] 开始执行提交流程, 读取文件: saveTokens.csv
+[2025-07-12 15:28:35] 成功读取 10 个 token
+[2025-07-12 15:28:35] 
+==================================================
+[2025-07-12 15:28:35] 开始处理 token [1/1]: Bearer eyJhbGci...
+[2025-07-12 15:28:35] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"r7w26eeps2uj5pxl6s56l31s3r6rki7a","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[2025-07-12 15:28:35] 生成动态签名: random=r7w26eeps2uj5pxl6s56l31s3r6rki7a, timestamp=1752319715, signature=3CFAB54E0C9422F11B4327C37EF1A956
+[2025-07-12 15:28:36] 创建订单响应状态码: 200
+[2025-07-12 15:28:36] ✅ 订单创建成功
+[2025-07-12 15:28:38] 尝试获取充值记录 [1/5]
+[2025-07-12 15:28:38] 签名前参数: {"language":0,"pageNo":1,"pageSize":10,"payId":-1,"payTypeId":-1,"random":"ggk4aixvjy6moicei3bor0yzqbuedgq6","state":-1}
+[2025-07-12 15:28:38] 获取记录响应状态码: 200
+[2025-07-12 15:28:38] ✅ 获取到充值记录: 单号=RC2025071216583553500013a, 金额=888
+[2025-07-12 15:28:38] 签名前参数: {"language":5,"random":"avzacitohu2e15qhyrbd1b95k7bfos82","webSite":"https%3A%2F%2Fsitweb.22889.club"}
+[2025-07-12 15:28:39] 工单入口响应状态码: 200
+[2025-07-12 15:28:39] ✅ 提取到 datablock: 024a224b4c564299ce33881e8b1464b93a0f4e12b4c9d0106b6929946570aca54b0131ef7192efda3c8dc95ea8729eb920fcaafc2b265217472cba4d0f7b285d33d46e5b88b1cfd1e1f9009a68c25ce1704e320a2abde5126a00d809f2a06573fc588918bb510d88505bc8979398f776
+[2025-07-12 15:28:39] 生成的 UTR: 399552928250
+[2025-07-12 15:28:39] 签名前参数: {"code":10161,"dataBlock":"024a224b4c564299ce33881e8b1464b93a0f4e12b4c9d0106b6929946570aca54b0131ef7192efda3c8dc95ea8729eb920fcaafc2b265217472cba4d0f7b285d33d46e5b88b1cfd1e1f9009a68c25ce1704e320a2abde5126a00d809f2a06573fc588918bb510d88505bc8979398f776","formId":86,"language":0,"payName":"S7DaysPayINR-UPI","payTypeId":10161,"random":"929788781578","tenantId":1062,"workOrderTypeId":6}
+[2025-07-12 15:28:39] 提交工单参数: random=929788781578, timestamp=1752319719, signature=83016C4BEE31C2D391CF238A36EB91AC
+[2025-07-12 15:28:39] 提交工单响应状态码: 200
+[2025-07-12 15:28:39] 工单提交响应内容: {
+  "code": 1,
+  "msg": "Session expired",
+  "msgCode": 7005
+}
+[2025-07-12 15:28:39] ❌ 工单提交失败: Session expired
+[2025-07-12 15:28:39] 
+==================================================
+[2025-07-12 15:28:39] 处理完成: 共尝试 1 个, 成功 0 个
+[2025-07-12 15:28:39] 程序执行完成, 成功提交 0 个工单

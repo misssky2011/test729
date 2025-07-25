@@ -1,0 +1,26 @@
+[15:32:43] 开始，读取: saveTokens.csv
+[15:32:43] 读取 10 个 token
+[15:32:43] 
+------------------------------
+[15:32:43] 处理 token [1/1]
+[15:32:43] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"juqoibewm1rlwc92rxhugdba6qbwia8z","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+[15:32:43] 生成签名: 4F49D4F3A2239CC07EE0852C2E75C2B4
+[15:32:45] 创建订单状态码: 200
+[15:32:45] 订单创建成功
+[15:32:47] 尝试获取充值记录 1/5
+[15:32:47] 签名前参数: {"language":0,"pageNo":1,"pageSize":10,"payId":-1,"payTypeId":-1,"random":"yth58506v6dqquwzgl7tdpnwoku0g8wk","state":-1}
+[15:32:48] 获取记录状态码: 200
+[15:32:48] 获取到充值记录: RC2025071217024423800015a, 888
+[15:32:48] 签名前参数: {"language":5,"random":"iebheghasnfkn59um70zxmeh1i0tp34d","webSite":"https%3A%2F%2Fsitweb.22889.club"}
+[15:32:48] 工单入口状态码: 200
+[15:32:48] 提取到 datablock
+[15:32:48] 生成 UTR: 688916638345
+[15:32:48] 签名前参数: {"code":10161,"dataBlock":"024a224b4c564299ce33881e8b1464b93a0f4e12b4c9d0106b6929946570aca54b0131ef7192efda3c8dc95ea8729eb9eacf989047f6dfe890968f6cede0bdb24d4dd1402e5da5779c1b418247b4519db41f91d7fef3581a7c6365d7b0a3bdf390935c6fd880f51818bb29fd866eae16","formId":86,"language":0,"payName":"S7DaysPayINR-UPI","payTypeId":10161,"random":"179111559874","tenantId":1062,"workOrderTypeId":6}
+[15:32:48] 提交工单签名: 1F57D801C78A9125BC24AF7886069DD2
+[15:32:48] 提交工单状态码: 200
+[15:32:48] 工单提交响应: Succeed
+[15:32:48] 工单提交成功
+[15:32:48] 
+==============================
+[15:32:48] 完成: 尝试 1 个，成功 1 个
+[15:32:48] 结束，成功提交 1 个工单

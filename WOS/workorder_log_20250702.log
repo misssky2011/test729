@@ -1,0 +1,330 @@
+[2025-07-02 13:19:30,536] [INFO] 发起登录请求...
+[2025-07-02 13:19:31,986] [INFO] 登录响应: {'data': {'tokenHeader': 'Bearer ', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDQ3OTcxIiwibmJmIjoiMTc1MTQ0Nzk3MSIsImV4cCI6IjE3NTE1MzQzNzEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjE5OjMxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6MTk6MzAiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.1izE43QqY0r5YikexODWW1hOCV7Ysp6mLLWJHKx3ogo', 'expiresIn': 1751534371, 'passwordErrorNum': 0, 'passwordErrorMaxNum': None, 'googleVerifyInfo': None}, 'msgParameters': None, 'code': 0, 'msg': 'Succeed', 'msgCode': 0}
+[2025-07-02 13:19:31,987] [INFO] 登录成功，Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDQ3OTcxIiwibmJmIjoiMTc1MTQ0Nzk3MSIsImV4cCI6IjE3NTE1MzQzNzEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjE5OjMxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6MTk6MzAiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.1izE43QqY0r5YikexODWW1hOCV7Ysp6mLLWJHKx3ogo
+[2025-07-02 13:19:31,988] [INFO] 查询工单列表...
+[2025-07-02 13:19:31,989] [INFO] [工单列表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageList
+[2025-07-02 13:19:32,535] [INFO] [工单列表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:32,535] [INFO] 工单列表查询成功，记录总数: 403
+[2025-07-02 13:19:32,535] [INFO] 查询待处理工单...
+[2025-07-02 13:19:32,535] [INFO] [待处理工单] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageListByPending
+[2025-07-02 13:19:32,942] [INFO] [待处理工单] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:32,942] [INFO] 待处理工单查询成功，记录总数: 395
+[2025-07-02 13:19:32,942] [INFO] 查询工单配置页面...
+[2025-07-02 13:19:32,943] [INFO] [工单配置页面] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/TenantForm/GetPageList
+[2025-07-02 13:19:33,442] [INFO] [工单配置页面] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:33,442] [INFO] 工单配置页面查询成功，配置条数: 20
+[2025-07-02 13:19:33,442] [INFO] 查询首页配置...
+[2025-07-02 13:19:33,442] [INFO] [首页配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/ContentSetting/GetHomePagePageList
+[2025-07-02 13:19:33,819] [INFO] [首页配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:33,819] [INFO] 首页配置查询成功，配置条数: 20
+[2025-07-02 13:19:33,819] [INFO] 查询补单记录...
+[2025-07-02 13:19:33,819] [INFO] [补单记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordPagedList
+[2025-07-02 13:19:34,206] [INFO] [补单记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:34,206] [INFO] 补单记录查询成功，记录总数: 397
+[2025-07-02 13:19:34,206] [INFO] 查询补单统计报表...
+[2025-07-02 13:19:34,206] [INFO] [补单统计报表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordReport
+[2025-07-02 13:19:34,623] [INFO] [补单统计报表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:34,623] [INFO] 补单统计报表查询成功。
+[2025-07-02 13:19:34,623] [INFO] 查询代收三方转发记录...
+[2025-07-02 13:19:34,623] [INFO] [代收三方转发记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetRecordList
+[2025-07-02 13:19:35,011] [INFO] [代收三方转发记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:35,011] [INFO] 代收三方转发记录查询成功，记录总数: 1
+[2025-07-02 13:19:35,011] [INFO] 查询代收三方转发配置...
+[2025-07-02 13:19:35,011] [INFO] [代收三方转发配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetConfigList
+[2025-07-02 13:19:35,241] [INFO] [代收三方转发配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:35,242] [INFO] 代收三方转发配置查询成功，配置条数: 12
+[2025-07-02 13:19:35,242] [INFO] 查询 Telegram 账号配置...
+[2025-07-02 13:19:35,242] [INFO] [Telegram账号配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Telegram/GetPageList
+[2025-07-02 13:19:35,625] [INFO] [Telegram账号配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:35,625] [INFO] Telegram账号配置查询成功，账号数: 3
+[2025-07-02 13:19:35,625] [INFO] 查询商户管理列表...
+[2025-07-02 13:19:35,626] [INFO] [商户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Tenant/GetPageList
+[2025-07-02 13:19:36,022] [INFO] [商户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:36,023] [INFO] 商户管理列表查询成功，商户总数: 44
+[2025-07-02 13:19:36,023] [INFO] 查询用户管理列表...
+[2025-07-02 13:19:36,023] [INFO] [用户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/SysUser/GetPageList
+[2025-07-02 13:19:36,422] [INFO] [用户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:36,422] [INFO] 用户管理列表查询成功，用户总数: 1243
+[2025-07-02 13:19:36,422] [INFO] 查询权限管理列表...
+[2025-07-02 13:19:36,423] [INFO] [权限管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Role/GetPageList
+[2025-07-02 13:19:36,808] [INFO] [权限管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:36,808] [INFO] 权限管理列表查询成功，角色总数: 127
+[2025-07-02 13:19:36,808] [INFO] 查询菜单管理...
+[2025-07-02 13:19:36,809] [INFO] [菜单管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Menu/GetMenuTree
+[2025-07-02 13:19:37,598] [INFO] [菜单管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:19:37,598] [INFO] 菜单管理查询成功，菜单项数: 8
+[2025-07-02 13:47:16,411] [INFO] 发起登录请求...
+[2025-07-02 13:47:17,933] [INFO] 登录响应: {'data': {'tokenHeader': 'Bearer ', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDQ5NjM3IiwibmJmIjoiMTc1MTQ0OTYzNyIsImV4cCI6IjE3NTE1MzYwMzciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjQ3OjE3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6NDc6MTYiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.hMEcJ6gc9NRkPxp1lkfpGFXHnCAaf_ONysaC25KH708', 'expiresIn': 1751536037, 'passwordErrorNum': 0, 'passwordErrorMaxNum': None, 'googleVerifyInfo': None}, 'msgParameters': None, 'code': 0, 'msg': 'Succeed', 'msgCode': 0}
+[2025-07-02 13:47:17,933] [INFO] 登录成功，Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDQ5NjM3IiwibmJmIjoiMTc1MTQ0OTYzNyIsImV4cCI6IjE3NTE1MzYwMzciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjQ3OjE3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6NDc6MTYiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.hMEcJ6gc9NRkPxp1lkfpGFXHnCAaf_ONysaC25KH708
+[2025-07-02 13:47:17,935] [INFO] 查询工单列表...
+[2025-07-02 13:47:17,935] [INFO] [工单列表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageList
+[2025-07-02 13:47:18,356] [INFO] [工单列表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:18,356] [INFO] 工单列表查询成功，记录总数: 0
+[2025-07-02 13:47:18,356] [INFO] 查询待处理工单...
+[2025-07-02 13:47:18,356] [INFO] [待处理工单] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageListByPending
+[2025-07-02 13:47:18,736] [INFO] [待处理工单] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:18,736] [INFO] 待处理工单查询成功，记录总数: 0
+[2025-07-02 13:47:18,736] [INFO] 查询工单配置页面...
+[2025-07-02 13:47:18,736] [INFO] [工单配置页面] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/TenantForm/GetPageList
+[2025-07-02 13:47:19,255] [INFO] [工单配置页面] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:19,255] [INFO] 工单配置页面查询成功，配置条数: 20
+[2025-07-02 13:47:19,255] [INFO] 查询首页配置...
+[2025-07-02 13:47:19,255] [INFO] [首页配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/ContentSetting/GetHomePagePageList
+[2025-07-02 13:47:19,629] [INFO] [首页配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:19,629] [INFO] 首页配置查询成功，配置条数: 20
+[2025-07-02 13:47:19,629] [INFO] 查询补单记录...
+[2025-07-02 13:47:19,630] [INFO] [补单记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordPagedList
+[2025-07-02 13:47:20,037] [INFO] [补单记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:20,037] [INFO] 补单记录查询成功，记录总数: 0
+[2025-07-02 13:47:20,037] [INFO] 查询补单统计报表...
+[2025-07-02 13:47:20,037] [INFO] [补单统计报表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordReport
+[2025-07-02 13:47:20,458] [INFO] [补单统计报表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:20,458] [INFO] 补单统计报表查询成功。
+[2025-07-02 13:47:20,458] [INFO] 查询代收三方转发记录...
+[2025-07-02 13:47:20,458] [INFO] [代收三方转发记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetRecordList
+[2025-07-02 13:47:20,832] [INFO] [代收三方转发记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:20,833] [INFO] 代收三方转发记录查询成功，记录总数: 0
+[2025-07-02 13:47:20,833] [INFO] 查询代收三方转发配置...
+[2025-07-02 13:47:20,833] [INFO] [代收三方转发配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetConfigList
+[2025-07-02 13:47:21,238] [INFO] [代收三方转发配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:21,238] [INFO] 代收三方转发配置查询成功，配置条数: 12
+[2025-07-02 13:47:21,239] [INFO] 查询 Telegram 账号配置...
+[2025-07-02 13:47:21,239] [INFO] [Telegram账号配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Telegram/GetPageList
+[2025-07-02 13:47:21,640] [INFO] [Telegram账号配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:21,640] [INFO] Telegram账号配置查询成功，账号数: 3
+[2025-07-02 13:47:21,640] [INFO] 查询商户管理列表...
+[2025-07-02 13:47:21,640] [INFO] [商户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Tenant/GetPageList
+[2025-07-02 13:47:22,013] [INFO] [商户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:22,013] [INFO] 商户管理列表查询成功，商户总数: 44
+[2025-07-02 13:47:22,013] [INFO] 查询用户管理列表...
+[2025-07-02 13:47:22,013] [INFO] [用户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/SysUser/GetPageList
+[2025-07-02 13:47:22,581] [INFO] [用户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:22,581] [INFO] 用户管理列表查询成功，用户总数: 1243
+[2025-07-02 13:47:22,581] [INFO] 查询权限管理列表...
+[2025-07-02 13:47:22,581] [INFO] [权限管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Role/GetPageList
+[2025-07-02 13:47:22,975] [INFO] [权限管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:22,975] [INFO] 权限管理列表查询成功，角色总数: 127
+[2025-07-02 13:47:22,976] [INFO] 查询菜单管理...
+[2025-07-02 13:47:22,976] [INFO] [菜单管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Menu/GetMenuTree
+[2025-07-02 13:47:23,761] [INFO] [菜单管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:47:23,761] [INFO] 菜单管理查询成功，菜单项数: 8
+[2025-07-02 13:53:38,565] [INFO] 发起登录请求...
+[2025-07-02 13:53:40,296] [INFO] 登录响应: {'data': {'tokenHeader': 'Bearer ', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDUwMDIwIiwibmJmIjoiMTc1MTQ1MDAyMCIsImV4cCI6IjE3NTE1MzY0MjAiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjUzOjQwIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6NTM6MzgiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.2zHzYLqofzi_sEWMObQLsbTeoFdfV3m1WsoabYzVVT0', 'expiresIn': 1751536420, 'passwordErrorNum': 0, 'passwordErrorMaxNum': None, 'googleVerifyInfo': None}, 'msgParameters': None, 'code': 0, 'msg': 'Succeed', 'msgCode': 0}
+[2025-07-02 13:53:40,296] [INFO] 登录成功，Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDUwMDIwIiwibmJmIjoiMTc1MTQ1MDAyMCIsImV4cCI6IjE3NTE1MzY0MjAiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjUzOjQwIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6NTM6MzgiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.2zHzYLqofzi_sEWMObQLsbTeoFdfV3m1WsoabYzVVT0
+[2025-07-02 13:53:40,298] [INFO] 查询工单列表...
+[2025-07-02 13:53:40,298] [INFO] [工单列表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageList
+[2025-07-02 13:53:40,729] [INFO] [工单列表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:40,729] [INFO] 工单列表查询成功，记录总数: 0
+[2025-07-02 13:53:40,729] [INFO] 查询待处理工单...
+[2025-07-02 13:53:40,729] [INFO] [待处理工单] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageListByPending
+[2025-07-02 13:53:41,143] [INFO] [待处理工单] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:41,144] [INFO] 待处理工单查询成功，记录总数: 0
+[2025-07-02 13:53:41,144] [INFO] 查询工单配置页面...
+[2025-07-02 13:53:41,144] [INFO] [工单配置页面] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/TenantForm/GetPageList
+[2025-07-02 13:53:41,624] [INFO] [工单配置页面] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:41,624] [INFO] 工单配置页面查询成功，配置条数: 20
+[2025-07-02 13:53:41,624] [INFO] 查询首页配置...
+[2025-07-02 13:53:41,624] [INFO] [首页配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/ContentSetting/GetHomePagePageList
+[2025-07-02 13:53:42,028] [INFO] [首页配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:42,029] [INFO] 首页配置查询成功，配置条数: 20
+[2025-07-02 13:53:42,029] [INFO] 查询补单记录...
+[2025-07-02 13:53:42,029] [INFO] [补单记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordPagedList
+[2025-07-02 13:53:42,415] [INFO] [补单记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:42,415] [INFO] 补单记录查询成功，记录总数: 0
+[2025-07-02 13:53:42,415] [INFO] 查询补单统计报表...
+[2025-07-02 13:53:42,415] [INFO] [补单统计报表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordReport
+[2025-07-02 13:53:42,923] [INFO] [补单统计报表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:42,923] [INFO] 补单统计报表查询成功。
+[2025-07-02 13:53:42,923] [INFO] 查询代收三方转发记录...
+[2025-07-02 13:53:42,923] [INFO] [代收三方转发记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetRecordList
+[2025-07-02 13:53:43,299] [INFO] [代收三方转发记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:43,299] [INFO] 代收三方转发记录查询成功，记录总数: 0
+[2025-07-02 13:53:43,299] [INFO] 查询代收三方转发配置...
+[2025-07-02 13:53:43,300] [INFO] [代收三方转发配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetConfigList
+[2025-07-02 13:53:43,697] [INFO] [代收三方转发配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:43,697] [INFO] 代收三方转发配置查询成功，配置条数: 12
+[2025-07-02 13:53:43,697] [INFO] 查询 Telegram 账号配置...
+[2025-07-02 13:53:43,697] [INFO] [Telegram账号配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Telegram/GetPageList
+[2025-07-02 13:53:44,109] [INFO] [Telegram账号配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:44,109] [INFO] Telegram账号配置查询成功，账号数: 3
+[2025-07-02 13:53:44,109] [INFO] 查询商户管理列表...
+[2025-07-02 13:53:44,109] [INFO] [商户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Tenant/GetPageList
+[2025-07-02 13:53:44,487] [INFO] [商户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:44,487] [INFO] 商户管理列表查询成功，商户总数: 44
+[2025-07-02 13:53:44,487] [INFO] 查询用户管理列表...
+[2025-07-02 13:53:44,487] [INFO] [用户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/SysUser/GetPageList
+[2025-07-02 13:53:45,072] [INFO] [用户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:45,072] [INFO] 用户管理列表查询成功，用户总数: 1243
+[2025-07-02 13:53:45,072] [INFO] 查询权限管理列表...
+[2025-07-02 13:53:45,073] [INFO] [权限管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Role/GetPageList
+[2025-07-02 13:53:45,464] [INFO] [权限管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:45,464] [INFO] 权限管理列表查询成功，角色总数: 127
+[2025-07-02 13:53:45,464] [INFO] 查询菜单管理...
+[2025-07-02 13:53:45,464] [INFO] [菜单管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Menu/GetMenuTree
+[2025-07-02 13:53:46,244] [INFO] [菜单管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:53:46,244] [INFO] 菜单管理查询成功，菜单项数: 8
+[2025-07-02 13:56:46,305] [INFO] 发起登录请求...
+[2025-07-02 13:56:47,436] [INFO] 登录响应: {'data': {'tokenHeader': 'Bearer ', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDUwMjA3IiwibmJmIjoiMTc1MTQ1MDIwNyIsImV4cCI6IjE3NTE1MzY2MDciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjU2OjQ3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6NTY6NDYiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.4hLgNZvFYtPzo-cjyL_O9ex2_x1LbEkR6FkvOsldbPk', 'expiresIn': 1751536607, 'passwordErrorNum': 0, 'passwordErrorMaxNum': None, 'googleVerifyInfo': None}, 'msgParameters': None, 'code': 0, 'msg': 'Succeed', 'msgCode': 0}
+[2025-07-02 13:56:47,437] [INFO] 登录成功，Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDUwMjA3IiwibmJmIjoiMTc1MTQ1MDIwNyIsImV4cCI6IjE3NTE1MzY2MDciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjU2OjQ3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6NTY6NDYiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.4hLgNZvFYtPzo-cjyL_O9ex2_x1LbEkR6FkvOsldbPk
+[2025-07-02 13:56:47,438] [INFO] 查询工单列表...
+[2025-07-02 13:56:47,438] [INFO] [工单列表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageList
+[2025-07-02 13:56:47,856] [INFO] [工单列表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:47,856] [INFO] 工单列表查询成功，记录总数: 6
+[2025-07-02 13:56:47,856] [INFO] 查询待处理工单...
+[2025-07-02 13:56:47,856] [INFO] [待处理工单] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageListByPending
+[2025-07-02 13:56:48,267] [INFO] [待处理工单] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:48,267] [INFO] 待处理工单查询成功，记录总数: 6
+[2025-07-02 13:56:48,267] [INFO] 查询工单配置页面...
+[2025-07-02 13:56:48,267] [INFO] [工单配置页面] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/TenantForm/GetPageList
+[2025-07-02 13:56:48,764] [INFO] [工单配置页面] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:48,764] [INFO] 工单配置页面查询成功，配置条数: 20
+[2025-07-02 13:56:48,764] [INFO] 查询首页配置...
+[2025-07-02 13:56:48,764] [INFO] [首页配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/ContentSetting/GetHomePagePageList
+[2025-07-02 13:56:49,159] [INFO] [首页配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:49,160] [INFO] 首页配置查询成功，配置条数: 20
+[2025-07-02 13:56:49,160] [INFO] 查询补单记录...
+[2025-07-02 13:56:49,160] [INFO] [补单记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordPagedList
+[2025-07-02 13:56:49,556] [INFO] [补单记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:49,557] [INFO] 补单记录查询成功，记录总数: 6
+[2025-07-02 13:56:49,557] [INFO] 查询补单统计报表...
+[2025-07-02 13:56:49,557] [INFO] [补单统计报表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordReport
+[2025-07-02 13:56:49,948] [INFO] [补单统计报表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:49,948] [INFO] 补单统计报表查询成功。
+[2025-07-02 13:56:49,948] [INFO] 查询代收三方转发记录...
+[2025-07-02 13:56:49,949] [INFO] [代收三方转发记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetRecordList
+[2025-07-02 13:56:50,509] [INFO] [代收三方转发记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:50,509] [INFO] 代收三方转发记录查询成功，记录总数: 6
+[2025-07-02 13:56:50,510] [INFO] 查询代收三方转发配置...
+[2025-07-02 13:56:50,510] [INFO] [代收三方转发配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetConfigList
+[2025-07-02 13:56:50,897] [INFO] [代收三方转发配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:50,899] [INFO] 代收三方转发配置查询成功，配置条数: 12
+[2025-07-02 13:56:50,899] [INFO] 查询 Telegram 账号配置...
+[2025-07-02 13:56:50,899] [INFO] [Telegram账号配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Telegram/GetPageList
+[2025-07-02 13:56:51,270] [INFO] [Telegram账号配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:51,270] [INFO] Telegram账号配置查询成功，账号数: 3
+[2025-07-02 13:56:51,270] [INFO] 查询商户管理列表...
+[2025-07-02 13:56:51,270] [INFO] [商户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Tenant/GetPageList
+[2025-07-02 13:56:51,652] [INFO] [商户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:51,652] [INFO] 商户管理列表查询成功，商户总数: 44
+[2025-07-02 13:56:51,653] [INFO] 查询用户管理列表...
+[2025-07-02 13:56:51,653] [INFO] [用户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/SysUser/GetPageList
+[2025-07-02 13:56:52,200] [INFO] [用户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:52,201] [INFO] 用户管理列表查询成功，用户总数: 1243
+[2025-07-02 13:56:52,201] [INFO] 查询权限管理列表...
+[2025-07-02 13:56:52,201] [INFO] [权限管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Role/GetPageList
+[2025-07-02 13:56:52,593] [INFO] [权限管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:52,593] [INFO] 权限管理列表查询成功，角色总数: 127
+[2025-07-02 13:56:52,593] [INFO] 查询菜单管理...
+[2025-07-02 13:56:52,593] [INFO] [菜单管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Menu/GetMenuTree
+[2025-07-02 13:56:53,363] [INFO] [菜单管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:56:53,364] [INFO] 菜单管理查询成功，菜单项数: 8
+[2025-07-02 13:58:07,483] [INFO] 发起登录请求...
+[2025-07-02 13:58:08,646] [INFO] 登录响应: {'data': {'tokenHeader': 'Bearer ', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDUwMjg4IiwibmJmIjoiMTc1MTQ1MDI4OCIsImV4cCI6IjE3NTE1MzY2ODgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjU4OjA4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6NTg6MDciLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.CLEwpMXKzAZcgzDgZvcDjSWNosb8GXryLSKgA4ms0ZM', 'expiresIn': 1751536688, 'passwordErrorNum': 0, 'passwordErrorMaxNum': None, 'googleVerifyInfo': None}, 'msgParameters': None, 'code': 0, 'msg': 'Succeed', 'msgCode': 0}
+[2025-07-02 13:58:08,646] [INFO] 登录成功，Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDUwMjg4IiwibmJmIjoiMTc1MTQ1MDI4OCIsImV4cCI6IjE3NTE1MzY2ODgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDA5OjU4OjA4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMDk6NTg6MDciLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.CLEwpMXKzAZcgzDgZvcDjSWNosb8GXryLSKgA4ms0ZM
+[2025-07-02 13:58:08,648] [INFO] 查询工单列表...
+[2025-07-02 13:58:08,648] [INFO] [工单列表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageList
+[2025-07-02 13:58:09,047] [INFO] [工单列表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:09,047] [INFO] 工单列表查询成功，记录总数: 6
+[2025-07-02 13:58:09,047] [INFO] 查询待处理工单...
+[2025-07-02 13:58:09,048] [INFO] [待处理工单] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageListByPending
+[2025-07-02 13:58:09,444] [INFO] [待处理工单] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:09,444] [INFO] 待处理工单查询成功，记录总数: 6
+[2025-07-02 13:58:09,445] [INFO] 查询工单配置页面...
+[2025-07-02 13:58:09,445] [INFO] [工单配置页面] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/TenantForm/GetPageList
+[2025-07-02 13:58:09,931] [INFO] [工单配置页面] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:09,931] [INFO] 工单配置页面查询成功，配置条数: 20
+[2025-07-02 13:58:09,931] [INFO] 查询首页配置...
+[2025-07-02 13:58:09,931] [INFO] [首页配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/ContentSetting/GetHomePagePageList
+[2025-07-02 13:58:10,321] [INFO] [首页配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:10,321] [INFO] 首页配置查询成功，配置条数: 20
+[2025-07-02 13:58:10,321] [INFO] 查询补单记录...
+[2025-07-02 13:58:10,321] [INFO] [补单记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordPagedList
+[2025-07-02 13:58:10,710] [INFO] [补单记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:10,711] [INFO] 补单记录查询成功，记录总数: 6
+[2025-07-02 13:58:10,711] [INFO] 查询补单统计报表...
+[2025-07-02 13:58:10,711] [INFO] [补单统计报表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordReport
+[2025-07-02 13:58:11,095] [INFO] [补单统计报表] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:11,095] [INFO] 补单统计报表查询成功。
+[2025-07-02 13:58:11,096] [INFO] 查询代收三方转发记录...
+[2025-07-02 13:58:11,096] [INFO] [代收三方转发记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetRecordList
+[2025-07-02 13:58:11,475] [INFO] [代收三方转发记录] 响应 code: 7 - msg: Unexpected character encountered while parsing value: 1. Path 'queryTimeEnd', line 1, position 51.,参数[queryTimeEnd] |Unexpected character encountered while parsing value: 1. Path 'queryTimeBegin', line 1, position 20.,参数[queryTimeBegin] 
+[2025-07-02 13:58:11,475] [WARNING] 代收三方转发记录查询失败或无数据。
+[2025-07-02 13:58:11,475] [INFO] 查询代收三方转发配置...
+[2025-07-02 13:58:11,475] [INFO] [代收三方转发配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetConfigList
+[2025-07-02 13:58:11,855] [INFO] [代收三方转发配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:11,855] [INFO] 代收三方转发配置查询成功，配置条数: 12
+[2025-07-02 13:58:11,855] [INFO] 查询 Telegram 账号配置...
+[2025-07-02 13:58:11,855] [INFO] [Telegram账号配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Telegram/GetPageList
+[2025-07-02 13:58:12,258] [INFO] [Telegram账号配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:12,258] [INFO] Telegram账号配置查询成功，账号数: 3
+[2025-07-02 13:58:12,258] [INFO] 查询商户管理列表...
+[2025-07-02 13:58:12,258] [INFO] [商户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Tenant/GetPageList
+[2025-07-02 13:58:12,639] [INFO] [商户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:12,639] [INFO] 商户管理列表查询成功，商户总数: 44
+[2025-07-02 13:58:12,640] [INFO] 查询用户管理列表...
+[2025-07-02 13:58:12,640] [INFO] [用户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/SysUser/GetPageList
+[2025-07-02 13:58:13,205] [INFO] [用户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:13,205] [INFO] 用户管理列表查询成功，用户总数: 1243
+[2025-07-02 13:58:13,205] [INFO] 查询权限管理列表...
+[2025-07-02 13:58:13,205] [INFO] [权限管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Role/GetPageList
+[2025-07-02 13:58:13,614] [INFO] [权限管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:13,614] [INFO] 权限管理列表查询成功，角色总数: 127
+[2025-07-02 13:58:13,614] [INFO] 查询菜单管理...
+[2025-07-02 13:58:13,614] [INFO] [菜单管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Menu/GetMenuTree
+[2025-07-02 13:58:14,232] [INFO] [菜单管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 13:58:14,232] [INFO] 菜单管理查询成功，菜单项数: 8
+[2025-07-02 14:03:04,515] [INFO] 发起登录请求...
+[2025-07-02 14:03:05,487] [INFO] 登录响应: {'data': {'tokenHeader': 'Bearer ', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDUwNTg1IiwibmJmIjoiMTc1MTQ1MDU4NSIsImV4cCI6IjE3NTE1MzY5ODUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDEwOjAzOjA1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMTA6MDM6MDQiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.nwcz0XBLTDIfP-7nJ4IM37lgaEyFHGrUtUNGw8uh48o', 'expiresIn': 1751536985, 'passwordErrorNum': 0, 'passwordErrorMaxNum': None, 'googleVerifyInfo': None}, 'msgParameters': None, 'code': 0, 'msg': 'Succeed', 'msgCode': 0}
+[2025-07-02 14:03:05,488] [INFO] 登录成功，Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzUxNDUwNTg1IiwibmJmIjoiMTc1MTQ1MDU4NSIsImV4cCI6IjE3NTE1MzY5ODUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNy8wMy8yMDI1IDEwOjAzOjA1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiVGVuYW50SWQiOiIwIiwiVXNlcklkIjoiMTQ0NiIsIlVzZXJOYW1lIjoiZmlnbyIsIkxvZ2luVGltZSI6IjA3LzAyLzIwMjUgMTA6MDM6MDQiLCJMb2dpbklQQWRkcmVzcyI6IuacquefpSIsIklzQmluZEdvb2dsZSI6IjAiLCJMb2dpblRpbWVzIjoiMCIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIklzU3VwZXJBZG1pbiI6IkZhbHNlIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoiV29ya1RyYWNraW5nVGlja2V0In0.nwcz0XBLTDIfP-7nJ4IM37lgaEyFHGrUtUNGw8uh48o
+[2025-07-02 14:03:05,489] [INFO] 查询工单列表...
+[2025-07-02 14:03:05,489] [INFO] [工单列表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageList
+[2025-07-02 14:03:05,887] [INFO] [工单列表] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:05,888] [INFO] 工单列表查询成功，记录总数: 6
+[2025-07-02 14:03:05,888] [INFO] 查询待处理工单...
+[2025-07-02 14:03:05,888] [INFO] [待处理工单] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/WorkOrder/GetPageListByPending
+[2025-07-02 14:03:06,315] [INFO] [待处理工单] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:06,316] [INFO] 待处理工单查询成功，记录总数: 6
+[2025-07-02 14:03:06,316] [INFO] 查询工单配置页面...
+[2025-07-02 14:03:06,316] [INFO] [工单配置页面] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/TenantForm/GetPageList
+[2025-07-02 14:03:06,789] [INFO] [工单配置页面] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:06,789] [INFO] 工单配置页面查询成功，配置条数: 20
+[2025-07-02 14:03:06,789] [INFO] 查询首页配置...
+[2025-07-02 14:03:06,789] [INFO] [首页配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/ContentSetting/GetHomePagePageList
+[2025-07-02 14:03:07,199] [INFO] [首页配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:07,199] [INFO] 首页配置查询成功，配置条数: 20
+[2025-07-02 14:03:07,199] [INFO] 查询补单记录...
+[2025-07-02 14:03:07,199] [INFO] [补单记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordPagedList
+[2025-07-02 14:03:07,587] [INFO] [补单记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:07,587] [INFO] 补单记录查询成功，记录总数: 6
+[2025-07-02 14:03:07,587] [INFO] 查询补单统计报表...
+[2025-07-02 14:03:07,587] [INFO] [补单统计报表] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/StatisticalReport/GetRechargeRecordReport
+[2025-07-02 14:03:07,989] [INFO] [补单统计报表] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:07,990] [INFO] 补单统计报表查询成功。
+[2025-07-02 14:03:07,990] [INFO] 查询代收三方转发记录...
+[2025-07-02 14:03:07,990] [INFO] [代收三方转发记录] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetRecordList
+[2025-07-02 14:03:08,391] [INFO] [代收三方转发记录] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:08,391] [INFO] 代收三方转发记录查询成功，记录总数: 6
+[2025-07-02 14:03:08,391] [INFO] 查询代收三方转发配置...
+[2025-07-02 14:03:08,392] [INFO] [代收三方转发配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Forward/GetConfigList
+[2025-07-02 14:03:08,800] [INFO] [代收三方转发配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:08,800] [INFO] 代收三方转发配置查询成功，配置条数: 12
+[2025-07-02 14:03:08,800] [INFO] 查询 Telegram 账号配置...
+[2025-07-02 14:03:08,800] [INFO] [Telegram账号配置] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Telegram/GetPageList
+[2025-07-02 14:03:09,182] [INFO] [Telegram账号配置] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:09,182] [INFO] Telegram账号配置查询成功，账号数: 3
+[2025-07-02 14:03:09,182] [INFO] 查询商户管理列表...
+[2025-07-02 14:03:09,182] [INFO] [商户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Tenant/GetPageList
+[2025-07-02 14:03:09,573] [INFO] [商户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:09,573] [INFO] 商户管理列表查询成功，商户总数: 44
+[2025-07-02 14:03:09,573] [INFO] 查询用户管理列表...
+[2025-07-02 14:03:09,573] [INFO] [用户管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/SysUser/GetPageList
+[2025-07-02 14:03:09,993] [INFO] [用户管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:09,994] [INFO] 用户管理列表查询成功，用户总数: 1243
+[2025-07-02 14:03:09,994] [INFO] 查询权限管理列表...
+[2025-07-02 14:03:09,994] [INFO] [权限管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Role/GetPageList
+[2025-07-02 14:03:10,390] [INFO] [权限管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:10,390] [INFO] 权限管理列表查询成功，角色总数: 127
+[2025-07-02 14:03:10,390] [INFO] 查询菜单管理...
+[2025-07-02 14:03:10,391] [INFO] [菜单管理] 请求 URL: https://sit-workorderadmin.mggametransit.com/api/Menu/GetMenuTree
+[2025-07-02 14:03:11,169] [INFO] [菜单管理] 响应 code: 0 - msg: Succeed
+[2025-07-02 14:03:11,169] [INFO] 菜单管理查询成功，菜单项数: 8

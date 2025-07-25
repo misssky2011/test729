@@ -1,0 +1,55 @@
+📂 [2025-07-12 15:18:17] 开始读取 token 文件: saveTokens.csv
+✅ [2025-07-12 15:18:17] 成功读取 37 个 token
+
+================================================================================
+🔐 [2025-07-12 15:18:17] 处理 Token [1/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:17] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"v0pvtmdv5rs5zdpi3v9rxeaxcw9wbq9s","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:17] 创建订单响应: HTTP 401
+
+================================================================================
+🔐 [2025-07-12 15:18:17] 处理 Token [2/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:17] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"nlyz5zp0vtiggjbg27ouju0khz1l7orc","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:18] 创建订单响应: HTTP 401
+
+================================================================================
+🔐 [2025-07-12 15:18:18] 处理 Token [3/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:18] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"wgofchaby8gk8f68gzol8n2d0tdiesk5","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:18] 创建订单响应: HTTP 401
+
+================================================================================
+🔐 [2025-07-12 15:18:18] 处理 Token [4/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:18] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"90xk60gnz2ge54sbysjsx1ybe6i9hzkg","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:19] 创建订单响应: HTTP 401
+
+================================================================================
+🔐 [2025-07-12 15:18:19] 处理 Token [5/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:19] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"uepw93nx4djdu71mzcbowrwx1imuo7l0","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:19] 创建订单响应: HTTP 401
+
+================================================================================
+🔐 [2025-07-12 15:18:19] 处理 Token [6/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:19] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"2bwa2aawilteldy5ute9laq8dz22751h","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:19] 创建订单响应: HTTP 401
+
+================================================================================
+🔐 [2025-07-12 15:18:19] 处理 Token [7/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:19] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"omiqzn0er4v67faefj9decm723s16yqg","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:20] 创建订单响应: HTTP 401
+
+================================================================================
+🔐 [2025-07-12 15:18:20] 处理 Token [8/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:20] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"qh6mkycd1ejfln63houjet6nzw9mqmi8","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:20] 创建订单响应: HTTP 401
+
+================================================================================
+🔐 [2025-07-12 15:18:20] 处理 Token [9/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:20] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"8sbswszbwu870swoco3fvpdovk5mbzzi","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:20] 创建订单响应: HTTP 401
+
+================================================================================
+🔐 [2025-07-12 15:18:20] 处理 Token [10/10]: Bearer eyJhbGci...
+🔐 [2025-07-12 15:18:20] 签名前参数: {"amount":888,"language":5,"payTypeId":10161,"random":"c4eoa5wejsv4mwy61tfzhsymv9bz379z","urlInfo":"https://sitweb.22889.club,status/rechargeStatus","vendorId":1}
+📨 [2025-07-12 15:18:21] 创建订单响应: HTTP 401
+
+================================================================================
+📊 [2025-07-12 15:18:21] 执行完成: 共试试 10 个 Token, 成功 0, 失败 10
