@@ -27,7 +27,9 @@ BET_URL = f"{API_BASE}/WinGoBet"
 USERNAME_FILE = "D:/figo/工具/pycharm/PycharmProjects/WinGo/username.txt"
 CALL_INTERVAL = 1
 MAX_CALLS_PER_TOKEN = 1
-MAX_TOKENS_TO_RUN = 20  # 同时运行的用户数
+MAX_TOKENS_TO_RUN = 1  # 同时运行的用户数
+
+
 
 BET_CONTENT_OPTIONS = [
     'Num_0', 'Num_1', 'Num_2', 'Num_3', 'Num_4',
@@ -249,6 +251,8 @@ def get_bet_record_list(bearer_token: str, game_code: str, page_no: int = 1, pag
         return None
 
 
+# 中间代码保持不变...
+
 def run_flow(username: str, user_index: int):
     global total_users, login_failures, bet_success, bet_failures, error_codes, error_details
 
@@ -282,30 +286,31 @@ def run_flow(username: str, user_index: int):
             print(f"{GRAY_BOLD}================ 用户 {username} 流程结束 (游戏: {game_code}) ================ {RESET}")
             return
 
-        bet_content = random.choice(BET_CONTENT_OPTIONS)
-        # amount = random.randint(1, 1000)  # 随机金额
-        amount = random.choice([ 10, 20, 50, 100, 200, 500, 1000])  # 固定金额
+        # ↓↓↓ 修改开始：对所有下注类型进行下注 ↓↓↓
+        amount = random.choice([10, 20, 50, 100, 200, 500, 1000])  # 固定金额
+        for bet_content in BET_CONTENT_OPTIONS:
+            bet_result = place_bet(
+                bearer_token=bet_token, game_code=game_code, issue_number=issue,
+                amount=amount, bet_multiple=1, bet_content=bet_content, username=username
+            )
 
-        bet_result = place_bet(
-            bearer_token=bet_token, game_code=game_code, issue_number=issue,
-            amount=amount, bet_multiple=1, bet_content=bet_content, username=username
-        )
-
-        if bet_result and bet_result.get("code") == 0:
-            with stats_lock:
-                bet_success += 1
-        else:
-            with stats_lock:
-                bet_failures += 1
-                error_code = bet_result.get("code") if bet_result else "exception"
-                error_msg = bet_result.get("msg") if bet_result else "request error"
-                error_codes[error_code] += 1
-                error_details[error_code].append((username, error_msg))
+            if bet_result and bet_result.get("code") == 0:
+                with stats_lock:
+                    bet_success += 1
+            else:
+                with stats_lock:
+                    bet_failures += 1
+                    error_code = bet_result.get("code") if bet_result else "exception"
+                    error_msg = bet_result.get("msg") if bet_result else "request error"
+                    error_codes[error_code] += 1
+                    error_details[error_code].append((username, error_msg))
+        # ↑↑↑ 修改结束 ↑↑↑
 
         get_bet_record(game_code)
         get_bet_record_list(bearer_token=bet_token, game_code=game_code)
 
         print(f"{GRAY_BOLD}================ 用户 {username} 流程结束 (游戏: {game_code}) ================ {RESET}")
+
 
 
 if __name__ == "__main__":

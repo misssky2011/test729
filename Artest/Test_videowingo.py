@@ -1,3 +1,5 @@
+# VideoWinGo同一期下注所有类型
+# 该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
 import hashlib
 import json
 import random
@@ -29,7 +31,7 @@ MAX_TOKENS_TO_RUN = 1  # 改成3个线程同时跑
 
 # 固定账号和密码
 FIXED_USERS = [
-    ("6695270070", "q123q123"),
+    ("6695270002", "q123q123"),
 ]
 
 BET_CONTENT_OPTIONS = [
