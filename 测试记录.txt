@@ -844,7 +844,9 @@
      gitbub :
             账号和密码:figo58669@gmail.com  / Figo8899
     
-       git库:https://github.com/Figo-test/Artest.git    #figo
+       git库:
+             https://github.com/Figo-test/Artest.git    #figo
+             https://github.com/misssky2011/test729.git # test729
              https://git.arpro.club/ar_test/ar_test.gi  #Michael
 
     
