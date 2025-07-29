@@ -1,54 +1,103 @@
 --------------------------------------------------------------------常用数据&工具----------------------------------------------------------------------
- figo58669@gmail.com\llf1988216
+     figo58669@gmail.com\llf1988216
 
- Tg汉化设置:
-     https://t.me/setlanguage/classic-zh-cn
+     Everything中文版：
+         https://soft.3dmgame.com/down/324472.html
+
+     Xmind：
+         https://xmind.cn/
+         https://xmind.cn/mindmaps-gallery/?text=%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE
+
+     Charles：
+         https://www.charlesproxy.com/
+
+     VScode：
+          https://apps.microsoft.com/detail/xp9khm4bk9fz7q?launch=true&mode=full&hl=zh-cn&gl=de&ocid=bingwebsearch
+
+     Pycharm：
+         https://www.jetbrains.com/pycharm/download/?section=windows#
 
 
- FLY-VPN:   账密:yz3216192@gmail.com/asdf1234   
+     文件转换：
+         https://convertio.co/zh/
+
+     视频转换：
+         https://www.aconvert.com/cn/video/
+    
+     PDF转换工具：
+         https://tools.pdf24.org/zh/edit-pdf
+         https://docsmall.com/
+
+     图片压缩：
+         https://tinypng.com/
+
+     图片素材：
+         https://www.pinterest.com/pin/33847434693409021/
+     
+     MD在线工具：
+         https://www.toolhelper.cn/Code/Markdown
 
 
- 055线上账号:9876544320/aa123456
+     磁力熊：
+         https://www.cilixiong.org/drama/
 
- 本地数据库:root/figo1234
+     音乐之家：
+         http://www.90t8.com/
+
+     数据分析：
+         https://analytics.google.com/analytics/web/?utm_campaign=SuiteHeader&utm_source=UniversalPicker&utm_medium=getStarted&hl=zh_CN&pli=1#/p417724531/realtime/overview?params=_u..nav%3Dmaui&collectionId=user
+
+     055线上账号:9876544320/aa123456
+
+     本地数据库:
+         root/figo1234
          登录 MySQL:
          mysql -h localhost -u root -p
 
- 插入视频地址:https://www.youtube.com/watch?v=dDRWhKoeuSc
+     插入视频地址:
+         https://www.youtube.com/watch?v=dDRWhKoeuSc
+    
+     Pixpin截图工具：
+         https://pixpin.cn/docs/change-log/2.0.0.3
 
- FastStone Capture专业截图、录屏软件,可滚动截图：
-     下载地址:https://cdn-download.faststonecapture.cn/FSCaptureSetup.exe
+     FastStone Capture专业截图、录屏软件,可滚动截图：
+         下载地址:https://cdn-download.faststonecapture.cn/FSCaptureSetup.exe
+         注册码:XPNMF-ISDYF-LCSED-BPATU 或 RPTME-IMDHD-MIEPX-VLXAW	
 
- 注册码:XPNMF-ISDYF-LCSED-BPATU 或 RPTME-IMDHD-MIEPX-VLXAW	
+ 
 
- 兰卡本地手机充值:*#123*1111111#
+     兰卡本地手机充值:*#123*1111111#    
 
+     Tg汉化设置:
+         https://t.me/setlanguage/classic-zh-cn
 
- Telegram添加机器人:
-     1、在搜索框输入@botFather
-     2、输入/newbot
-     3、名称验证,如:test_message_XXX
-     4、再次输入名称,test_message_XXX,生成token
-     5、复制token,后台配置
-     6、创建群主New group
-     7、群需要添加@myidbot
-     8、获取群ID:/getgroupid@myidbot
-     9、添加机器人进群:test_message_XXX,并设置为管理员权限
+     TG添加机器人:
+         1、在搜索框输入@botFather
+         2、输入/newbot
+         3、名称验证,如:test_message_XXX
+         4、再次输入名称,test_message_XXX,生成token
+         5、复制token,后台配置
+         6、创建群主New group
+         7、群需要添加@myidbot
+         8、获取群ID:/getgroupid@myidbot
+         9、添加机器人进群:test_message_XXX,并设置为管理员权限
+
+     FLY-VPN:   
+         账密:yz3216192@gmail.com/asdf1234   
   
-  
- SIT设置“禁止投注”账号:
+     SIT设置“禁止投注”账号:
         asdf@1234.com/q123q123
   
- 开通了ARB的账号	
-    1991122335/aa123456
+     开通了ARB的账号	
+          1991122335/aa123456
 	
- 全系k8s,polardb,redis,clb,ecs监控地址:
-      https://monitor-aliyun.22889.club/dashboards
-      ardeploy
-      Ardeploy@123
+     全系k8s,polardb,redis,clb,ecs监控地址:
+         https://monitor-aliyun.22889.club/dashboards
+         ardeploy
+         Ardeploy@123
 
- DBeaver
-     https://dbeaver.io/download/
+     DBeaver
+         https://dbeaver.io/download/
 
 ---------------------------------------------------------------------SIT测试账号--------------------------------------------------------------------
    
@@ -73,7 +122,7 @@
         三方api地址: thirdapi.22886.club
         前端地址: web.22886.club
     
-    100016   95270001/q123q123
+    100016   95270001/q123q123     ---邀请码k8Q6q100016
     100017   95270002/q123q123     ---已加入黑名单,明日查看洗码
     600813   95270003/q123q123     ---未加入黑名单,明日查看洗码
     600814   95270004/q123q123
@@ -93,8 +142,8 @@
     1641254       95271001/q123q123
     1641255       95271002/q123q123
     1641256       95271003/q123q123
-    1641257        95271004/q123q123
-    1641258        95271005/q123q123
+    1641257       95271004/q123q123
+    1641258       95271005/q123q123
     1641259       95271006/q123q123
             
             
@@ -168,7 +217,7 @@
      UI原型
     https://www.figma.com/file/aYWm8xlcNDhHHQwzpmcSDy/%E5%85%AC%E7%89%883_%E9%BB%84%E7%BB%BF%E8%89%B2?type=design&node-id=0-1&mode=design&t=ndh0zywbfZki4hRy-0
   
------------------------------------------------------ -------------线上前后端测试账号----------------------------------------------------------------
+---------------------------------------------------------------------线上测试账号---------------------------------------------------------------------
      后台:
         arceshi/qwerasdf
         
@@ -176,6 +225,8 @@
         
      前台
         88888888666/asd123asd123
+        99999999111/asd123asd123
+        99999999222/asd123asd123
     
         030    : arceshi/arceshi    ---rengeceshi
 
@@ -387,37 +438,37 @@
 
     2月份主要工作:
      【客户工单系统】
-       1)权限跳转优化需求:,输出7条测试用例,交付并已上线；
-	   2)客服工单系统_5.1【Tg推送】,输出61条用例,已交付；
-	   3)优化需求: 工单前台用户提交评论,输出5条用例,已发版验证；
-	   4)协助PWA优化需求测试(两个版本)；
-	   5)工单接口分布式锁调整
-	   6)一对一客服工单防重复提交&敏感词过滤
+         1)权限跳转优化需求:,输出7条测试用例,交付并已上线；
+	     2)客服工单系统_5.1【Tg推送】,输出61条用例,已交付；
+	     3)优化需求: 工单前台用户提交评论,输出5条用例,已发版验证；
+	     4)协助PWA优化需求测试(两个版本)；
+	     5)工单接口分布式锁调整
+	     6)一对一客服工单防重复提交&敏感词过滤
      【三方游戏】
-       1)彩票Saas内嵌优化,并通过发版验证(034)
-	   2)彩票SaaS客户端多语言
-	   3)彩票平台同步Saas彩票注单优化需求
-	   4)彩票WinGO自动跟投策略,输出100+用例及性能测试用例12条,已交付
-	   5)彩票优化072&016(切换卡顿、下注时间等)
-	   6)新彩票-摩托车,输出功能测试用例54条,性能测试用例8条,未提测
+         1)彩票Saas内嵌优化,并通过发版验证(034)
+	     2)彩票SaaS客户端多语言
+	     3)彩票平台同步Saas彩票注单优化需求
+	     4)彩票WinGO自动跟投策略,输出100+用例及性能测试用例12条,已交付
+	     5)彩票优化072&016(切换卡顿、下注时间等)
+	     6)新彩票-摩托车,输出功能测试用例54条,性能测试用例8条,未提测
      【其他】
-       1)测试团队及时有效的沟通,并认真完成本职工作；
-       2)在项目测试中和产品、开发紧密配合,积极反馈测试阶段阻塞问题,并协助开发解决问题,保证项目顺利推进；
-       3)老后台彩票优化需求:5个优化需求测试及版本验证,输出70+条测试点,并进行发版验证；
+         1)测试团队及时有效的沟通,并认真完成本职工作；
+         2)在项目测试中和产品、开发紧密配合,积极反馈测试阶段阻塞问题,并协助开发解决问题,保证项目顺利推进；
+         3)老后台彩票优化需求:5个优化需求测试及版本验证,输出70+条测试点,并进行发版验证；
 	 
 	   
      7月份主要工作:
       【客户工单系统】
-       1)工单系统-v5.2.4优化需求,输出30+条功能测试点,交付并已上线；
-	   2)工单系统-v5.2.5优化需求,输出20+条功能测试点,交付并已上线
+         1)工单系统-v5.2.4优化需求,输出30+条功能测试点,交付并已上线；
+	     2)工单系统-v5.2.5优化需求,输出20+条功能测试点,交付并已上线
       【三方游戏】
-       1) 后端两个版本合并(非saas彩票、saas彩票),同一个分支,兼容不同站点,已全站发版并通过验证；
+         1) 后端两个版本合并(非saas彩票、saas彩票),同一个分支,兼容不同站点,已全站发版并通过验证；
       【其他】
-       1)测试团队及时有效的沟通,并认真完成本职工作；
-       2)在项目测试中和产品、开发紧密配合,积极反馈测试阶段阻塞问题,并协助开发解决问题,保证项目顺利推进；
-       3)老后台彩票优化需求:3个优化需求测试及版本验证,输出100+条测试点,并进行发版验证；
-	   4)协助开发线上问题排查及验证；
-	   5)用Python对K3|WinGO|5D|TRx|MotoRacing游戏进行下注已完成；
+         1)测试团队及时有效的沟通,并认真完成本职工作；
+         2)在项目测试中和产品、开发紧密配合,积极反馈测试阶段阻塞问题,并协助开发解决问题,保证项目顺利推进；
+         3)老后台彩票优化需求:4个优化需求测试及版本验证,输出180+条测试点,并进行发版验证；
+	     4)协助开发线上问题排查及验证；
+	     5)用Python对K3|WinGO|5D|TRx|MotoRacing|VideoWinGo等游戏进行接口自动下注已完成；
 	   
 	   
 	 通道ID: 
@@ -837,6 +888,7 @@
     前端查看:
     JSON.stringify  --格式转换
     getBuildInfo()  -- 查看发版是否更新 
+
 
 --------------------------------------------------------------------工单系统-----------------------------------------------------------------------------
 
@@ -1463,7 +1515,11 @@
 		
 			
 ----------------------------------------------------------------------ApiFox---------------------------------------------------------------------------------
-    figo/ llf1988216
+     账号：
+         figo/ llf1988216
+     Apifox 帮助文档
+         https://docs.apifox.com/doc-5629567
+
 -------------------------------------------------------------------Mac book 安装brew-------------------------------------------------------------------------
      Android安装:
          1. 检查系统要求

@@ -1,6 +1,6 @@
 # TRXWinGo不同类型下注
 # 该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
-# 作者：figo 
+# 作者：Figo 
 # 时间：2025-07-08
 import hashlib
 import json
@@ -30,7 +30,7 @@ LOGIN_URL = "https://sitlotteryapi.22889.club/api/webapi/Login"
 
 # === 本地配置 ===
 USERNAME_FILE = "D:/figo/工具/pycharm/PycharmProjects/WinGo/username.txt"  # 会员目录
-MAX_TOKENS_TO_RUN = 35  # 同时运行的用户数
+MAX_TOKENS_TO_RUN = 50  # 同时运行的用户数
 REQUEST_TIMEOUT = 10  # 请求超时时间（秒）
 
 BET_CONTENT_OPTIONS = ['Num_0', 'Num_1', 'Num_2', 'Num_3', 'Num_4', 'Num_5', 'Num_6', 'Num_7', 'Num_8',

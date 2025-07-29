@@ -1,6 +1,6 @@
 # K3不同类型下注
 # 该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
-# 作者：figo 
+# 作者：Figo 
 # 时间：2025-07-08
 import hashlib
 import json
@@ -24,8 +24,8 @@ BET_URL = f"{API_BASE}/K3Bet"
 GET_BET_RECORD_URL = "https://api.wmgametransit.com/api/Lottery/GetRecordPage"
 
 # === 本地配置 ===
-USERNAME_FILE = "D:/figo/工具/pycharm/PycharmProjects/WinGo/username.txt"  # 会员目录
-MAX_TOKENS_TO_RUN = 134  # 同时运行的用户数
+USERNAME_FILE = "D:/figo/工具/VScode/Artest/username8005.txt"  # 会员目录
+MAX_TOKENS_TO_RUN = 500  # 同时运行的用户数
 SUPPORTED_GAME_CODES = [ 'K3_1M', 'K3_3M', 'K3_5M', 'K3_10M']
 
 # === 统计数据结构 ===

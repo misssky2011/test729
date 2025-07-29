@@ -1,6 +1,6 @@
 # WinGo不同类型下注
 # 该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
-# 作者：figo 
+# 作者：Figo 
 # 时间：2025-07-08
 import hashlib
 import json
@@ -28,10 +28,10 @@ GET_BALANCE_URL = f"{API_BASE}/GetBalance"
 BET_URL = f"{API_BASE}/WinGoBet"
 
 # === 本地配置 ===
-USERNAME_FILE = "D:/figo/工具/pycharm/PycharmProjects/WinGo/username.txt"
+USERNAME_FILE = "D:/figo/工具/VScode/Artest/username8005.txt"
 CALL_INTERVAL = 1
 MAX_CALLS_PER_TOKEN = 1
-MAX_TOKENS_TO_RUN = 20  # 同时运行的用户数
+MAX_TOKENS_TO_RUN = 50  # 同时运行的用户数
 
 BET_CONTENT_OPTIONS = [
     'Num_0', 'Num_1', 'Num_2', 'Num_3', 'Num_4',
@@ -287,8 +287,8 @@ def run_flow(username: str, user_index: int):
             return
 
         bet_content = random.choice(BET_CONTENT_OPTIONS)
-        # amount = random.randint(1, 1000)  # 随机金额
-        amount = random.choice([ 10, 20, 50, 100, 200, 500, 1000])  # 固定金额
+        amount = random.randint(1, 1000)  # 随机金额
+        #amount = random.choice([ 10, 20, 50, 100, 200, 500, 1000])  # 固定金额
 
         bet_result = place_bet(
             bearer_token=bet_token, game_code=game_code, issue_number=issue,
