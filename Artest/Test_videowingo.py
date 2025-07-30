@@ -29,7 +29,7 @@ GET_BALANCE_URL = f"{API_BASE}/GetBalance"
 
 CALL_INTERVAL = 1
 MAX_CALLS_PER_TOKEN = 1
-MAX_TOKENS_TO_RUN = 1  # 改成3个线程同时跑
+MAX_TOKENS_TO_RUN = 2  # 改成3个线程同时跑
 
 # 固定账号和密码
 FIXED_USERS = [

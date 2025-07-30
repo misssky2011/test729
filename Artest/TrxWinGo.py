@@ -30,7 +30,7 @@ LOGIN_URL = "https://sitlotteryapi.22889.club/api/webapi/Login"
 
 # === 本地配置 ===
 USERNAME_FILE = "D:/figo/工具/pycharm/PycharmProjects/WinGo/username.txt"  # 会员目录
-MAX_TOKENS_TO_RUN = 50  # 同时运行的用户数
+MAX_TOKENS_TO_RUN = 40  # 同时运行的用户数
 REQUEST_TIMEOUT = 10  # 请求超时时间（秒）
 
 BET_CONTENT_OPTIONS = ['Num_0', 'Num_1', 'Num_2', 'Num_3', 'Num_4', 'Num_5', 'Num_6', 'Num_7', 'Num_8',

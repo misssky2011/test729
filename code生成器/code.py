@@ -25,7 +25,7 @@ def generate_ifsc_code():
 def generate_uip_code():
     return f"{random.randint(1000, 9999)}@{random.randint(1000000, 9999999)}"
 
-# 生成巴西 CPF 个人税号
+# 生成巴西 CPF 
 def generate_cpf_code():
     cpf_digits = [random.randint(0, 9) for _ in range(9)]
     dv1_sum = sum([(10 - i) * cpf_digits[i] for i in range(9)])

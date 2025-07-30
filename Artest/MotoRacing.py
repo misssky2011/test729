@@ -24,7 +24,7 @@ LOGIN_URL = "https://sitlotteryapi.22889.club/api/webapi/Login"
 GET_RECORD_URL = f"{API_BASE}/GetRecordPage"  # 新增下注记录接口
 
 USERNAME_FILE = "D:/figo/工具/VScode/Artest/username.txt"  # 会员目录
-MAX_TOKENS_TO_RUN = 30  # 同时运行的用户数
+MAX_TOKENS_TO_RUN = 40  # 同时运行的用户数
 SUPPORTED_GAME_CODES = [ 'MotoRace_1M' ]
 
 stats_lock = threading.Lock()

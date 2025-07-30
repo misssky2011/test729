@@ -31,7 +31,7 @@ BET_URL = f"{API_BASE}/WinGoBet"
 USERNAME_FILE = "D:/figo/工具/VScode/Artest/username8005.txt"
 CALL_INTERVAL = 1
 MAX_CALLS_PER_TOKEN = 1
-MAX_TOKENS_TO_RUN = 50  # 同时运行的用户数
+MAX_TOKENS_TO_RUN = 40  # 同时运行的用户数
 
 BET_CONTENT_OPTIONS = [
     'Num_0', 'Num_1', 'Num_2', 'Num_3', 'Num_4',

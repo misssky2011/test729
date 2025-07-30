@@ -32,7 +32,7 @@ GET_BET_RECORD_URL = f"{API_BASE}/GetRecordPage"
 
 # === 本地配置 ===
 USERNAME_FILE = "D:/figo/工具/VScode/Artest/username.txt"  # 会员目录
-MAX_TOKENS_TO_RUN = 50  # 同时运行的用户数
+MAX_TOKENS_TO_RUN = 40  # 同时运行的用户数
 
 BET_CONTENT_OPTIONS = [ "FirstNum_0", "FirstNum_1", "FirstNum_2", "FirstNum_3", "FirstNum_4", "FirstNum_5",
                         "FirstNum_6", "FirstNum_7", "FirstNum_8", "FirstNum_9", "FirstBigSmall_Big",
