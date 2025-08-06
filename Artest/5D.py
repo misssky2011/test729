@@ -11,6 +11,7 @@ from typing import Optional, List
 from urllib.parse import urlencode, urlparse, parse_qs
 from collections import OrderedDict, defaultdict
 import requests
+from collections import defaultdict
 
 
 # === ANSI 颜色代码 ===
@@ -31,8 +32,8 @@ BET_URL = f"{API_BASE}/D5Bet"
 GET_BET_RECORD_URL = f"{API_BASE}/GetRecordPage"
 
 # === 本地配置 ===
-USERNAME_FILE = "D:/figo/工具/VScode/Artest/username.txt"  # 会员目录
-MAX_TOKENS_TO_RUN = 40  # 同时运行的用户数
+USERNAME_FILE = "D:/figo/工具/VScode/Artest/username8005.txt"  # 会员目录
+MAX_TOKENS_TO_RUN = 40   # 同时运行的用户数
 
 BET_CONTENT_OPTIONS = [ "FirstNum_0", "FirstNum_1", "FirstNum_2", "FirstNum_3", "FirstNum_4", "FirstNum_5",
                         "FirstNum_6", "FirstNum_7", "FirstNum_8", "FirstNum_9", "FirstBigSmall_Big",
@@ -58,6 +59,9 @@ login_failures = 0
 bet_success = 0
 bet_failures = 0
 error_codes = defaultdict(int)
+
+error_reason_detail = defaultdict(lambda: {"users": set(), "count": 0})
+
 
 # === 全局日志锁 ===
 log_lock = threading.Lock()
@@ -313,7 +317,7 @@ def run_flow(username: str):
     
     bet_content = random.choice(BET_CONTENT_OPTIONS)
     # 随机下注金额
-    amount: int = random.randint(10, 1000)
+    amount = random.randint(1, 1000)  # 随机金额
     log_lines.append(f"    当前期号: {issue}, 下注内容: {bet_content}, 金额: {amount}")
 
     # [5] 游戏下注
@@ -334,13 +338,13 @@ def run_flow(username: str):
             with stats_lock:
                 bet_failures += 1
                 error_codes[result.get("code")] += 1
-    else:
-        log_lines.append("    ❌ 下单异常，未收到响应或请求失败")
-        # 对异常情况打印更详细的原始响应
-        log_lines.append(f"    响应内容: {bet_response}")
-        with stats_lock:
-            bet_failures += 1
-            error_codes["exception"] += 1
+
+            reason = f"{result.get('code')}_{result.get('msgCode') or result.get('msg', '')}"  # 给出原因
+            with stats_lock:
+                bet_failures += 1
+                error_codes[result.get("code")] += 1
+                error_reason_detail[reason]["users"].add(username)
+                error_reason_detail[reason]["count"] += 1
 
     # [6] 开奖历史
     log_lines.append(f"{Colors.BOLD}[6] 开奖历史{Colors.RESET}")
@@ -395,7 +399,15 @@ if __name__ == "__main__":
     print(f"🔒 登录失败数: {login_failures}")
     print(f"✅ 下注成功数: {bet_success}")
     print(f"❌ 下注失败数: {bet_failures}")
+ 
     if error_codes:
-        print("🧾 错误码分布:")
+        print("\n📟 错误码分布:")
         for code, count in error_codes.items():
             print(f"   - 错误码 {code}: {count} 次")
+
+    if error_reason_detail:
+        print("\n📉 下注失败原因详情:")
+        for reason, detail in error_reason_detail.items():
+            code_msg = reason.replace("_", ": ")
+            users_str = ', '.join(detail["users"])
+            print(f"  - 原因: {code_msg}\n    影响用户: {users_str}\n    失败次数: {detail['count']}")

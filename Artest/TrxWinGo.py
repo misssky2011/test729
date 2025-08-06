@@ -366,7 +366,7 @@ def run_flow(username: str):
     # [5] 下注
     bet_content = random.choice(BET_CONTENT_OPTIONS)
     # 金额设置为 10 ~ 1000 随机
-    amount: int=random.randint(10, 1000)
+    amount = random.randint(1, 1000)  # 随机金额
     # amount = random.choice([ 10, 20, 50, 100, 200, 500, 1000]) #固定金额
 
     bet_result = place_bet(bearer_token=bet_token, game_code=game_code, issue_number=issue, amount=amount,

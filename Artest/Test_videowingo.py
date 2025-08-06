@@ -33,7 +33,7 @@ MAX_TOKENS_TO_RUN = 2  # 改成3个线程同时跑
 
 # 固定账号和密码
 FIXED_USERS = [
-    ("6695270002", "q123q123"),
+    ("6695270003", "q123q123"),
 ]
 
 BET_CONTENT_OPTIONS = [

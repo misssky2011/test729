@@ -25,7 +25,7 @@ GET_BET_RECORD_URL = "https://api.wmgametransit.com/api/Lottery/GetRecordPage"
 
 # === 本地配置 ===
 USERNAME_FILE = "D:/figo/工具/VScode/Artest/username8005.txt"  # 会员目录
-MAX_TOKENS_TO_RUN = 400  # 同时运行的用户数
+MAX_TOKENS_TO_RUN = 20  # 同时运行的用户数
 SUPPORTED_GAME_CODES = [ 'K3_1M', 'K3_3M', 'K3_5M', 'K3_10M']
 
 # === 统计数据结构 ===
@@ -307,7 +307,7 @@ def run_flow(username: str):
         return
 
     # 金额设置为 10 ~ 1000 随机
-    amount: int = random.randint(10, 1000)
+    amount = random.randint(1, 1000)  # 随机金额
     log_lines.append(f"    当前期号: {issue}, 下注金额: {amount}")
 
     # 下注类型
