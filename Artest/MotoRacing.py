@@ -1,7 +1,10 @@
-# MotoRacing下注所有类型
-# 该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
-# 作者：Figo 
-# 时间：2025-07-08
+"""
+MotoRacing自动化投注测试脚本
+该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
+作者:Figo 
+邮箱:figo58669@gmail.com
+时间:2025-07-10
+"""
 import hashlib
 import json
 import random
@@ -23,7 +26,7 @@ BET_URL = f"{API_BASE}/MotoRaceBet"
 LOGIN_URL = "https://sitlotteryapi.22889.club/api/webapi/Login"
 GET_RECORD_URL = f"{API_BASE}/GetRecordPage"  # 新增下注记录接口
 
-USERNAME_FILE = "D:/figo/工具/VScode/Artest/username.txt"  # 会员目录
+USERNAME_FILE = "D:/figo/工具/VScode/Artest/username8005.txt"  # 会员目录
 MAX_TOKENS_TO_RUN = 40  # 同时运行的用户数
 SUPPORTED_GAME_CODES = [ 'MotoRace_1M' ]
 
@@ -254,8 +257,9 @@ def run_flow(username: str):
     # [5] 游戏下注
     log_buffer.append("[5] 游戏下注")
     if issue and final_token:
-        # 金额设置为 10 ~ 1000 随机
-        amount: int = random.randint(10, 1000)
+        # 金额设置为 10 ~ 200 随机
+        amount: int = random.randint(10, 200)
+  
         bet_content = random.choice(BET_CONTENT_OPTIONS)
         log_buffer.append(f"    ↳ 下注: {game_code}, 期号: {issue}, 内容: {bet_content}, 金额: {amount}")
         success, bet_res = place_bet(final_token, game_code, issue, amount, 1, bet_content)

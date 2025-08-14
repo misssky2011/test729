@@ -1,7 +1,8 @@
-# TRXWinGo不同类型下注
-# 该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
-# 作者：Figo 
-# 时间：2025-07-08
+"""
+TRXWinGo 不同类型下注 自动化投注测试脚本
+该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
+日期: 2025-08-14
+"""
 import hashlib
 import json
 import random
@@ -15,6 +16,7 @@ import requests
 
 # === ANSI颜色码 ===
 GREEN_BOLD = "\033[1;32m"  # 绿色加粗
+RED_BOLD = "\033[1;31m"    # 红色加粗
 GRAY_BOLD = "\033[1;90m"  # 灰色加粗
 RESET = "\033[0m"  # 重置样式
 
@@ -44,7 +46,9 @@ total_users = 0
 login_failures = 0
 bet_success = 0
 bet_failures = 0
-error_codes = defaultdict(int)
+
+# 使用字典记录失败原因和对应的用户列表
+failure_details = defaultdict(list)
 
 # 日志队列和打印线程
 log_queue = queue.Queue()
@@ -61,7 +65,6 @@ def compute_md5_upper(s: str) -> str:
 def generate_random_number_str(length=12) -> str:
     """生成指定长度的随机数字字符串，首位不为0"""
     return str(random.randint(1, 9)) + ''.join(str(random.randint(0, 9)) for _ in range(length - 1))
-
 
 
 def get_current_timestamp() -> str:
@@ -130,8 +133,8 @@ def generate_login_data(username: str) -> dict:
     return data
 
 
-def login_user(username: str, log_func) -> Optional[str]:
-    """执行登录并返回Token"""
+def login_user(username: str, log_func) -> Tuple[Optional[str], Optional[str]]:
+    """执行登录并返回Token和失败原因"""
     log_func(f"{GREEN_BOLD}[1] 用户登录{RESET}")
     data = generate_login_data(username)
     try:
@@ -144,21 +147,25 @@ def login_user(username: str, log_func) -> Optional[str]:
             if json_data.get("code") == 0:
                 login_url = json_data.get("data", {}).get("lotteryLoginUrl", "")
                 token = parse_qs(urlparse(login_url).query).get("Token", [None])[0]
-                return token
+                return token, None
             else:
                 error_msg = json_data.get("msg", "登录失败")
                 log_func(f"    ❌ 登录失败: {error_msg}")
+                return None, f"登录失败: {error_msg}"
         else:
-            log_func(f"    ❌ HTTP错误: {resp.status_code}")
+            error_msg = f"HTTP错误: {resp.status_code}"
+            log_func(f"    ❌ {error_msg}")
+            return None, error_msg
     except Exception as e:
-        log_func(f"    ❌ 登录异常: {str(e)[:100]}")
-    return None
+        error_msg = f"登录异常: {str(e)[:100]}"
+        log_func(f"    ❌ {error_msg}")
+        return None, error_msg
 
 
 # === 获取用户信息 ===
 
-def get_user_info(bearer_token: str, log_func) -> Tuple[Optional[dict], Optional[str]]:
-    """获取用户信息及下注专用Token"""
+def get_user_info(bearer_token: str, log_func) -> Tuple[Optional[dict], Optional[str], Optional[str]]:
+    """获取用户信息及下注专用Token和失败原因"""
     log_func(f"{GREEN_BOLD}[2] 用户信息{RESET}")
     random_num = generate_random_number_str()
     params = {"language": "en", "random": random_num, "timestamp": get_current_timestamp(),
@@ -171,16 +178,17 @@ def get_user_info(bearer_token: str, log_func) -> Tuple[Optional[dict], Optional
         log_func(f"    ↳ 响应: {resp.text[:200]}{'...' if len(resp.text) > 200 else ''}")
 
         bet_token = resp.headers.get("Authorization", "").replace("Bearer ", "").strip()
-        return resp.json(), bet_token
+        return resp.json(), bet_token, None
     except Exception as e:
-        log_func(f"    ❌ 异常: {str(e)[:100]}")
-        return None, None
+        error_msg = f"异常: {str(e)[:100]}"
+        log_func(f"    ❌ {error_msg}")
+        return None, None, error_msg
 
 
 # === 获取余额 ===
 
-def get_balance(bearer_token: str, log_func) -> Tuple[Optional[dict], float]:
-    """获取用户余额"""
+def get_balance(bearer_token: str, log_func) -> Tuple[Optional[dict], float, Optional[str]]:
+    """获取用户余额和失败原因"""
     log_func(f"{GREEN_BOLD}[3] 获取余额{RESET}")
     random_num = generate_random_number_str()
     params = {"language": "en", "random": random_num, "timestamp": get_current_timestamp(),
@@ -195,16 +203,17 @@ def get_balance(bearer_token: str, log_func) -> Tuple[Optional[dict], float]:
         data = resp.json()
         balance = data.get('data', {}).get('balance', 0.0)
         log_func(f"    ↳ 当前余额: {balance}")
-        return data, balance
+        return data, balance, None
     except Exception as e:
-        log_func(f"    ❌ 异常: {str(e)[:100]}")
-        return None, 0.0
+        error_msg = f"异常: {str(e)[:100]}"
+        log_func(f"    ❌ {error_msg}")
+        return None, 0.0, error_msg
 
 
 # === 获取当前期号 ===
 
-def get_issue_number(game_code: str, log_func) -> Optional[str]:
-    """获取当前期号"""
+def get_issue_number(game_code: str, log_func) -> Tuple[Optional[str], Optional[str]]:
+    """获取当前期号和失败原因"""
     log_func(f"{GREEN_BOLD}[4] 当前期号{RESET}")
     try:
         url = f"{DRAW_BASE}/{game_code}.json?ts={int(time.time() * 1000)}"
@@ -212,11 +221,17 @@ def get_issue_number(game_code: str, log_func) -> Optional[str]:
         log_func(f"    ↳ 响应: {resp.text[:200]}{'...' if len(resp.text) > 200 else ''}")
 
         issue_number = resp.json().get("current", {}).get("issueNumber")
-        log_func(f"    ↳ 当前期号: {issue_number}")
-        return issue_number
+        if issue_number:
+            log_func(f"    ↳ 当前期号: {issue_number}")
+            return issue_number, None
+        else:
+            error_msg = "未获取到期号"
+            log_func(f"    ❌ {error_msg}")
+            return None, error_msg
     except Exception as e:
-        log_func(f"    ❌ 异常: {str(e)[:100]}")
-        return None
+        error_msg = f"异常: {str(e)[:100]}"
+        log_func(f"    ❌ {error_msg}")
+        return None, error_msg
 
 
 # === 下单投注 ===
@@ -228,8 +243,8 @@ def place_bet(
     amount: int,
     bet_content: str,
     log_func: Callable[[str], None]
-     ) -> Optional[dict]:
-    """提交下注请求"""
+     ) -> Tuple[Optional[dict], Optional[str]]:
+    """提交下注请求并返回失败原因"""
     log_func(f"{GREEN_BOLD}[5] 游戏下注{RESET}")
     log_func(f"    ↳ 游戏: {game_code}, 期号: {issue_number}, 内容: {bet_content}, 金额: {amount}")
 
@@ -246,28 +261,36 @@ def place_bet(
     try:
         resp = requests.post(BET_URL, headers=headers, json=body, timeout=REQUEST_TIMEOUT)
         log_func(f"    ↳ 响应: {resp.text[:200]}{'...' if len(resp.text) > 200 else ''}")
-        return resp.json()
+        
+        if resp.status_code == 200:
+            return resp.json(), None
+        else:
+            error_msg = f"HTTP错误: {resp.status_code}"
+            return None, error_msg
     except Exception as e:
-        log_func(f"    ❌ 异常: {str(e)[:100]}")
-        return None
+        error_msg = f"异常: {str(e)[:100]}"
+        log_func(f"    ❌ {error_msg}")
+        return None, error_msg
 
 
 # === 获取开奖历史 ===
 
-def get_history_issue(game_code: str, log_func) -> Optional[dict]:
-    """获取历史开奖列表"""
+def get_history_issue(game_code: str, log_func) -> Tuple[Optional[dict], Optional[str]]:
+    """获取历史开奖列表和失败原因"""
     log_func(f"{GREEN_BOLD}[6] 开奖历史{RESET}")
     try:
         url = f"{DRAW_BASE}/{game_code}/GetHistoryIssuePage.json"
         params = {"ts": int(time.time() * 1000)}
         resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT)
         log_func(f"    ↳ 响应: {resp.text[:200]}{'...' if len(resp.text) > 200 else ''}")
-        return resp.json()
+        return resp.json(), None
     except Exception as e:
-        log_func(f"    ❌ 异常: {str(e)[:100]}")
-        return None
+        error_msg = f"异常: {str(e)[:100]}"
+        log_func(f"    ❌ {error_msg}")
+        return None, error_msg
 
-def get_bet_records(bearer_token: str, game_code: str, log_func) -> Optional[dict]:
+def get_bet_records(bearer_token: str, game_code: str, log_func) -> Tuple[Optional[dict], Optional[str]]:
+    """获取下注记录和失败原因"""
     log_func(f"{GREEN_BOLD}[7] 获取下注记录{RESET}")
 
     random_num = generate_random_number_str(length=12)
@@ -305,17 +328,18 @@ def get_bet_records(bearer_token: str, game_code: str, log_func) -> Optional[dic
         log_func(f"    ↳ 响应文本: {resp.text[:1000]}")
 
         resp.raise_for_status()
-        return resp.json()
+        return resp.json(), None
     except Exception as e:
-        log_func(f"    ❌ 异常: {str(e)[:100]}")
-        return None
+        error_msg = f"异常: {str(e)[:100]}"
+        log_func(f"    ❌ {error_msg}")
+        return None, error_msg
 
 
 # === 流程主逻辑 ===
 
 def run_flow(username: str):
     """用户流程：登录 -> 获取信息 -> 下单 -> 查询余额及记录"""
-    global total_users, login_failures, bet_success, bet_failures, error_codes
+    global total_users, login_failures, bet_success, bet_failures, failure_details
 
     # 用户日志缓冲区
     user_logs = []
@@ -323,6 +347,9 @@ def run_flow(username: str):
     def log_local(message: str):
         """将消息添加到用户日志缓冲区"""
         user_logs.append(message)
+        
+    # 记录失败原因
+    user_failures = []
 
     game_code = random.choice(SUPPORTED_GAME_CODES)
 
@@ -333,44 +360,65 @@ def run_flow(username: str):
         total_users += 1
 
     # [1] 登录
-    token = login_user(username, log_local)
+    token, failure_reason = login_user(username, log_local)
     if not token:
         with stats_lock:
             login_failures += 1
+            if failure_reason:
+                failure_details[failure_reason].append(username)
+                user_failures.append(failure_reason)
         log_local(f"{GRAY_BOLD}================================================ 用户 {username} 流程结束 (游戏: {game_code}) ================================================{RESET}")
         # 输出整个用户日志
         log_print("\n".join(user_logs))
         return
 
     # [2] 获取用户信息
-    user_info, bet_token = get_user_info(token, log_local)
+    user_info, bet_token, failure_reason = get_user_info(token, log_local)
     if not user_info or not bet_token:
+        with stats_lock:
+            if failure_reason:
+                failure_details[failure_reason].append(username)
+                user_failures.append(failure_reason)
         log_local(f"{GRAY_BOLD}================================================ 用户 {username} 流程结束 (游戏: {game_code}) ================================================{RESET}")
         log_print("\n".join(user_logs))
         return
 
     # [3] 获取余额
-    balance_info, old_balance = get_balance(token, log_local)
+    balance_info, old_balance, failure_reason = get_balance(token, log_local)
     if not balance_info:
+        with stats_lock:
+            if failure_reason:
+                failure_details[failure_reason].append(username)
+                user_failures.append(failure_reason)
         log_local(f"{GRAY_BOLD}================================================ 用户 {username} 流程结束 (游戏: {game_code}) ================================================{RESET}")
         log_print("\n".join(user_logs))
         return
 
     # [4] 获取期号
-    issue = get_issue_number(game_code, log_local)
+    issue, failure_reason = get_issue_number(game_code, log_local)
     if not issue:
+        with stats_lock:
+            if failure_reason:
+                failure_details[failure_reason].append(username)
+                user_failures.append(failure_reason)
         log_local(f"{GRAY_BOLD}================================================ 用户 {username} 流程结束 (游戏: {game_code}) ================================================{RESET}")
         log_print("\n".join(user_logs))
         return
 
     # [5] 下注
     bet_content = random.choice(BET_CONTENT_OPTIONS)
-    # 金额设置为 10 ~ 1000 随机
-    amount = random.randint(1, 1000)  # 随机金额
+    # 金额设置为 10 ~ 200 随机
+    amount: int = random.randint(10, 200) 
     # amount = random.choice([ 10, 20, 50, 100, 200, 500, 1000]) #固定金额
 
-    bet_result = place_bet(bearer_token=bet_token, game_code=game_code, issue_number=issue, amount=amount,
-                           bet_content=bet_content, log_func=log_local)
+    bet_result, failure_reason = place_bet(
+        bearer_token=bet_token, 
+        game_code=game_code, 
+        issue_number=issue, 
+        amount=amount,
+        bet_content=bet_content, 
+        log_func=log_local
+    )
 
     if bet_result:
         if bet_result.get("code") == 0:
@@ -380,33 +428,42 @@ def run_flow(username: str):
         else:
             error_code = bet_result.get("code", "exception")
             error_msg = bet_result.get("msg", "未知错误")
+            reason = f"下注失败: {error_code} - {error_msg[:50]}"
             with stats_lock:
                 bet_failures += 1
-                error_codes[error_code] += 1
-            log_local(f"    ❌ 下注失败: {error_code} - {error_msg[:50]}")
+                failure_details[reason].append(username)
+                user_failures.append(reason)
+            log_local(f"    ❌ {reason}")
     else:
+        reason = f"下注请求异常: {failure_reason}" if failure_reason else "下注请求异常"
         with stats_lock:
             bet_failures += 1
-            error_codes["exception"] += 1
-        log_local("    ❌ 下注请求异常")
+            failure_details[reason].append(username)
+            user_failures.append(reason)
+        log_local(f"    ❌ {reason}")
 
     # [6] 获取开奖历史
-    history = get_history_issue(game_code, log_local)
-    if history:
-        rec_count = len(history.get('list', []))
-        log_local(f"    ↳ 开奖历史记录数: {rec_count}")
-    else:
-        log_local("    ❌ 获取开奖历史失败")
+    history, failure_reason = get_history_issue(game_code, log_local)
+    if not history and failure_reason:
+        with stats_lock:
+            failure_details[failure_reason].append(username)
+            user_failures.append(failure_reason)
+        log_local(f"    ❌ 获取开奖历史失败: {failure_reason}")
 
     # [7] 获取下注记录
-    records = get_bet_records(bet_token, game_code, log_local)
-    if records:
-        count = len(records.get("data", {}).get("list", []))
-        log_local(f"    ↳ 下注记录数: {count}")
-    else:
-        log_local("    ❌ 获取下注记录失败")
+    records, failure_reason = get_bet_records(bet_token, game_code, log_local)
+    if not records and failure_reason:
+        with stats_lock:
+            failure_details[failure_reason].append(username)
+            user_failures.append(failure_reason)
+        log_local(f"    ❌ 获取下注记录失败: {failure_reason}")
 
-    # 流程结束
+    # 流程结束 - 添加失败原因摘要
+    if user_failures:
+        log_local(f"{RED_BOLD}    ⚠️ 失败原因: {', '.join(user_failures)}{RESET}")
+    else:
+        log_local(f"{GREEN_BOLD}    ✅ 所有操作成功完成{RESET}")
+        
     log_local(f"{GRAY_BOLD}================ 用户 {username} 流程结束 (游戏: {game_code}) ================{RESET}")
 
     # 输出整个用户日志
@@ -447,7 +504,12 @@ if __name__ == "__main__":
     print(f"🎯 下注成功数: {bet_success}")
     print(f"❌ 下注失败数: {bet_failures}")
 
-    if error_codes:
-        log_print("\n📜 失败错误码分布:")
-        for code, count in error_codes.items():
-            log_print(f"   - 错误码 {code}: {count} 次")
+    # 打印详细的失败原因和用户列表
+    if failure_details:
+        print("\n📜 失败原因详情:")
+        for reason, users in failure_details.items():
+            print(f"   - 原因: {reason}")
+            print(f"     影响用户: {', '.join(users[:5])}{'...' if len(users) > 5 else ''}")
+            print(f"     失败次数: {len(users)}")
+    else:
+        print("\n🎉 所有用户操作均成功完成!")

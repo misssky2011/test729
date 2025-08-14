@@ -28,7 +28,7 @@ GET_BALANCE_URL = f"{API_BASE}/GetBalance"
 BET_URL = f"{API_BASE}/WinGoBet"
 
 # === 本地配置 ===
-USERNAME_FILE = "D:/figo/工具/VScode/Artest/username.txt"
+USERNAME_FILE = "D:/figo/工具/VScode/Artest/username8005.txt"
 CALL_INTERVAL = 1
 MAX_CALLS_PER_TOKEN = 1
 MAX_TOKENS_TO_RUN = 1  # 同时运行的用户数
@@ -41,7 +41,7 @@ BET_CONTENT_OPTIONS = [
     'Color_Red', 'Color_Violet', 'Color_Green',
     'BigSmall_Small', 'BigSmall_Big'
 ]
-SUPPORTED_GAME_CODES = ['WinGo_5M'] # 'WinGo_30S', 'WinGo_1M', 'WinGo_3M', 'WinGo_5M'
+SUPPORTED_GAME_CODES = ['WinGo_30S'] # 'WinGo_30S', 'WinGo_1M', 'WinGo_3M', 'WinGo_5M'
 
 stats_lock = threading.Lock()
 total_users = 0

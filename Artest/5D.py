@@ -32,7 +32,7 @@ BET_URL = f"{API_BASE}/D5Bet"
 GET_BET_RECORD_URL = f"{API_BASE}/GetRecordPage"
 
 # === 本地配置 ===
-USERNAME_FILE = "D:/figo/工具/VScode/Artest/username8005.txt"  # 会员目录
+USERNAME_FILE = "D:/figo/工具/VScode/Artest/username.txt"  # 会员目录
 MAX_TOKENS_TO_RUN = 40   # 同时运行的用户数
 
 BET_CONTENT_OPTIONS = [ "FirstNum_0", "FirstNum_1", "FirstNum_2", "FirstNum_3", "FirstNum_4", "FirstNum_5",
@@ -316,8 +316,8 @@ def run_flow(username: str):
         return
     
     bet_content = random.choice(BET_CONTENT_OPTIONS)
-    # 随机下注金额
-    amount = random.randint(1, 1000)  # 随机金额
+    # 金额设置为 10 ~ 200 随机
+    amount: int = random.randint(10, 200)
     log_lines.append(f"    当前期号: {issue}, 下注内容: {bet_content}, 金额: {amount}")
 
     # [5] 游戏下注

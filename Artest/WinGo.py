@@ -1,7 +1,10 @@
-# WinGo不同类型下注
-# 该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
-# 作者：Figo 
-# 时间：2025-07-08
+"""
+WinGo自动化投注测试脚本
+该脚本模拟用户登录、获取用户信息、余额查询、下注、查询下注记录等操作
+作者:Figo 
+邮箱:figo58669@gmail.com
+时间:2025-07-08
+"""
 import hashlib
 import json
 import random
@@ -31,7 +34,7 @@ BET_URL = f"{API_BASE}/WinGoBet"
 USERNAME_FILE = "D:/figo/工具/VScode/Artest/username8005.txt"
 CALL_INTERVAL = 1
 MAX_CALLS_PER_TOKEN = 1
-MAX_TOKENS_TO_RUN = 40  # 同时运行的用户数
+MAX_TOKENS_TO_RUN = 1  # 同时运行的用户数
 
 BET_CONTENT_OPTIONS = [
     'Num_0', 'Num_1', 'Num_2', 'Num_3', 'Num_4',
@@ -287,7 +290,8 @@ def run_flow(username: str, user_index: int):
             return
 
         bet_content = random.choice(BET_CONTENT_OPTIONS)
-        amount = random.randint(1, 1000)  # 随机金额
+        # 金额设置为 10 ~ 200 随机
+        amount: int = random.randint(10, 200)
         #amount = random.choice([ 10, 20, 50, 100, 200, 500, 1000])  # 固定金额
 
         bet_result = place_bet(
